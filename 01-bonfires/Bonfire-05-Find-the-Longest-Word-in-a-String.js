@@ -1,5 +1,6 @@
 function findLongestWord(str) {
   var phrase= str.split(/\s/g);
+  console.log(phrase)
   var lengthArr = [];
   for(i=0; i<phrase.length; i ++){
   	var wordLength = phrase[i].length;
