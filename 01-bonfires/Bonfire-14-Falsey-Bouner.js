@@ -1,17 +1,14 @@
 function bouncer(arr) {
   // Don't show a false 
+  var legit= arr.filter(function(value){
+  	var id = new Boolean(value);
+  	  return id.valueOf()=== true;
 
-  for(i= 0; i < arr.length; i++) {
-  	  var id = new Boolean(arr[i])
-  	  console.log(id.valueOf());
+  });
+ 
+ 		return legit;
 
+  	};
 
-  //use ar,filter to make new array --fliter replaces loop?
-
-  	}
-
-    
-
-}
 
 bouncer([7, 'ate', '', false, 9]);
