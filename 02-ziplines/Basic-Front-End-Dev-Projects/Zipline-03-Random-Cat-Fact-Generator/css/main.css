@@ -1,0 +1,22 @@
+body {
+	background: black;
+	color: teal;
+}
+.main {
+	margin: auto;
+}
+.btn {
+	background: teal;
+}
+
+#fact-btn{
+	height: 5em;
+}
+.data {
+	margin: 1em 0;
+	font-weight: bold;
+	font-size: 1.75em;
+}
+#tweet {
+	height:2.5em;
+}
