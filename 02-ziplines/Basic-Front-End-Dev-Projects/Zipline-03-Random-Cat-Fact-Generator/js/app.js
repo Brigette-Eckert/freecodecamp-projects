@@ -26,16 +26,16 @@ $(document).ready(function() {
 		$("#fact-btn").click(function() {
 				$.getJSON(url, function(data) {
 						fact = data.facts[0];
-						$("#fact-display").html(fact)
-						factHTML = encodeURI(fact)
-					tweetURL= twitterHTML + factHTML;
+						$("#fact-display").html(fact);
 
 				twttr.widgets.createShareButton(
-				  'http://codepen.io/Brigette-Eckert/pen/EVVOpe',
+				  'http://goo.gl/lqo1gR',
 				  document.getElementById('tweet-container'),
 				  {
 				    text: fact,
-				    hashtags: "cats, random, facts"
+				    hashtags: "cats, random, facts",
+				    via: "CatFacts101",
+				    count: "none"
 
 				  }
 				);
