@@ -1,9 +1,5 @@
 $(document).ready(function() {
-		var url = "http://crossorigin.me/http://catfacts-api.appspot.com/api/facts?number=1?callback=JSON_CALLBACK?"
-		var twitterHTML = "https://twitter.com/intent/tweet?text=";
-		var fact = "";
-		var factHTML = "";
-		var tweetURL = "";
+		var url = "http://crossorigin.me/http://catfacts-api.appspot.com/api/facts?number=1?callback=JSON_CALLBACK?";
 		//twitter button js
 		window.twttr = (function(d, s, id) {
 				var js, fjs = d.getElementsByTagName(s)[0],
