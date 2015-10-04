@@ -29,12 +29,18 @@ $(document).ready(function() {
 						$("#fact-display").html(fact)
 						factHTML = encodeURI(fact)
 					tweetURL= twitterHTML + factHTML;
-					console.log(tweetURL);
+
+				twttr.widgets.createShareButton(
+				  'http://codepen.io/Brigette-Eckert/pen/EVVOpe',
+				  document.getElementById('tweet-container'),
+				  {
+				    text: fact,
+				    hashtags: "cats, random, facts"
+
+				  }
+				);
 				});
 
-				$(".btn-o").click(function() {
-						console.log("clicked");
 				});
 		});
 
-})
