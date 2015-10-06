@@ -1,5 +1,7 @@
 /*****General*****/
-
+nav {
+  z-index: 5; 
+}
 nav a,
 nav a:active,
 nav a:visited,
@@ -13,6 +15,7 @@ nav a:focus {
 }
 
 #name {
+  margin-top: 2em;
   margin-bottom: 0px;
   text-align: center;
 }
@@ -34,7 +37,9 @@ nav a:focus {
 .logo {
   border-radius: 100%;
   height: 3em;
+  margin: 4em auto;
 }
+
 /*****profolio******/
 
 #port {
