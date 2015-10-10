@@ -1,3 +1,4 @@
+// Check if a string (first argument) ends with the given target string (second argument).
 function end(str, target) {
 	 var phrase= str.split(/\s/g);
 	if(str.substr(str.length-1) === target || phrase[phrase.length-1] === target){
