@@ -2,13 +2,16 @@
 // All roman numerals answers should be provided in upper-case.
 
 function convert(num) {
-	var numArr = num.toString().split("");
-	console.log(numArr);
-	console.log(numArr.length)
-	//determine spot of number to determine proper roman numerial 
+	var romNum = {I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000}
+	var first = 0;
+	var remain = 0;
+		//determine size of num and remainder when dividing by proper roman num 
+		//loop over each key in object? to use logic in one step rather than multiple
 
-	//convert each number to proper roman numeral 
-	// 1 = I, 5 = V, 10 = X, 50 = L, 100 =C, 500 = D, 1000 = M
+		for(prop in romNum){
+			console.log("first " + parseInt(num/romNum[prop]));
+			console.log("remainder " + num%romNum[prop])
+		}
 }
 
 convert(36);
