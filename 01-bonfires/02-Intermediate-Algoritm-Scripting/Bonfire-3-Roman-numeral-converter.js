@@ -2,16 +2,35 @@
 // All roman numerals answers should be provided in upper-case.
 
 function convert(num) {
-	var romNum = {I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000}
-	var first = 0;
-	var remain = 0;
-		//determine size of num and remainder when dividing by proper roman num 
-		//loop over each key in object? to use logic in one step rather than multiple
-
-		for(prop in romNum){
-			console.log("first " + parseInt(num/romNum[prop]));
-			console.log("remainder " + num%romNum[prop])
+	var i =0;
+	var roman = "";
+	var romanNum = {
+		I: 1, 
+		V: 5,
+		X: 10,
+		L: 50,
+		C: 100,
+		D: 500,
+		M: 1000
+	}
+	var ordered = ["M", "D", "C", "L", "X", "V", "I"]
+	while(num > 0 && i <= 7) {
+		console.log(num)
+		console.log("checking", romanNum[ordered[i]])
+		if(num >= romanNum[ordered[i]]) {
+			roman += ordered[i]
+			num -= romanNum[ordered[i]]
+		} else{
+			i++
+			console.log("moving on")
 		}
-}
+		console.log(i);
+		console.log(roman);
+		console.log(num)
+		
+	}
+	
 
-convert(36);
+}	
+
+convert(42);
