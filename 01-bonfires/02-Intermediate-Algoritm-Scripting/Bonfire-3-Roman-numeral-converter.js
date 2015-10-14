@@ -18,19 +18,34 @@ function convert(num) {
 		console.log(num)
 		console.log("checking", romanNum[ordered[i]])
 		if(num >= romanNum[ordered[i]]) {
-			roman += ordered[i]
-			num -= romanNum[ordered[i]]
-		} else{
+			roman += ordered[i];
+			num -= romanNum[ordered[i]];	
+
+		}else{ 
 			i++
 			console.log("moving on")
-		}
-		console.log(i);
-		console.log(roman);
-		console.log(num)
+		}	
+			//single and double digits ending in 9 
+			roman = roman.replace("VIIII", "IX");
+			//single and double digits ending in 4
+			roman = roman.replace("IIII", "IV");
+			//90s 
+			roman = roman.replace("LXXXX", "IX");
+			//40s 
+			roman = roman.replace("XXXX", "IV");
+			//900s
+			roman = roman.replace("DCD", "XM");
+			//400s
+			roman = roman.replace("CCCC", "CD");
+			
+
 		
 	}
 	
-
+	console.log(roman);
+	return roman;
 }	
 
-convert(42);
+
+convert(902);
+
