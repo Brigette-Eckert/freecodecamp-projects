@@ -8,8 +8,9 @@ function bouncer(arr) {
   	  return id.valueOf()=== true;
 
   });
- 
+ 		console.log(legit)
  		return legit;
+ 		
 
   	};
 
