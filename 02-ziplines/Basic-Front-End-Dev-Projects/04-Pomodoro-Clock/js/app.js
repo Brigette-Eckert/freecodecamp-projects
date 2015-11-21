@@ -15,8 +15,12 @@ $('#addWork').click(function(){
 $('#minusWork').click(function(){
   //on - button click subtract 1 to Work interval
     workTime -=1;
+  if(workTime >= 0) {
   $("p.workInt").html(workTime);
   console.log(workTime);
+  } else {
+    workTime = 0;
+  }
 }); 
 
 $('#addBreak').click(function(){
@@ -31,10 +35,15 @@ $('#addBreak').click(function(){
 $('#minusBreak').click(function(){
   //on - button click subtract one from break interval
     breakTime -=1;
+  if(breakTime >=0){
   $("p.breakInt").html(breakTime);
   console.log(breakTime);
+  } else {
+    breakTime = 0;
+  }
 }); 
 
 //click to start and stop clock
-//set time interval 
-//reset clock with work timer changed 
+//set time interval
+//rest button
+//reset clock when work timer changed 
