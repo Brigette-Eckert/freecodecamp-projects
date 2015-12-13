@@ -6,6 +6,7 @@ var time = {
 var count = time.work;
   //storing function in var to be able to stop timer
 var timer ;
+var audio = new Audio('255101__soneproject__jingle2.wav');
 //set inner html to respective varibles
 $("p.workInt").html(time.work);
 $("p.breakInt").html(time.break);
@@ -29,6 +30,7 @@ function countDown() {
     } else {
       console.log("switch")
       //play alarm
+      audio.play();
        $("#clock").toggleClass("workTime");
     }
   };
@@ -65,7 +67,6 @@ $('#addBreak').click(function() {
   //on + button click add 1 to Break     interval
   time.break += 1;
   $("p.breakInt").html(time.break);
-  console.log(time.break);
 });
 
 $('#minusBreak').click(function() {
@@ -74,7 +75,6 @@ $('#minusBreak').click(function() {
   //avoiding non-existant and negative intervals
   if (time.break >= 1) {
     $("p.breakInt").html(time.break);
-    console.log(time.break);
   } else {
     time.break = 1;
   }
@@ -107,3 +107,4 @@ $("#start-stop").click(function() {
 //pause clock
 //add sound when swtiches from work to break and vice versa
 //function to convert seconds into munutes and display as string
+//call countdown again on switch 
