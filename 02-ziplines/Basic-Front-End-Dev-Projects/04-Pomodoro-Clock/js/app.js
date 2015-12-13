@@ -10,7 +10,7 @@ var timer ;
 $("p.workInt").html(time.work);
 $("p.breakInt").html(time.break);
 $("p.type").html("Work");
-$("#start-stop").html("Start")
+$("#start-stop").html("Start");
 $("p.counter").html(count);
 
 function countDown() {
@@ -82,6 +82,9 @@ $('#minusBreak').click(function() {
 
 //reset count to work time
 $("#reset").click(function() {
+  if($("#clock").hasClass("workTime") == false){
+    $("#clock").addClass("workTime");
+  }
   count = time.work;
   console.log("timer reset")
 });
