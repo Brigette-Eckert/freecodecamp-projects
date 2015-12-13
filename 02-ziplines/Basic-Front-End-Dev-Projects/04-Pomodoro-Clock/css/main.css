@@ -32,8 +32,8 @@ body {
 
 #clock p{
   text-align: center;
-  margin-top: 35%;
-  font-size: 500%;
+  font-size: 450%;
+  margin: 40px auto;
 }
 
 #start-reset {

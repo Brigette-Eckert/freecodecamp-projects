@@ -4,17 +4,43 @@ var time = {
   break: 5
 };
 var count = time.work;
+  //storing function in var to be able to stop timer
+var timer ;
 //set inner html to respective varibles
 $("p.workInt").html(time.work);
 $("p.breakInt").html(time.break);
+$("p.type").html("Work");
+$("#start-stop").html("Start")
 $("p.counter").html(count);
-$("#start").html("Start");
+
+function countDown() {
+  //setting work vs break sessions
+  if($("#clock").hasClass("workTime") == true) {
+    $("p.type").html("Work");
+     $("p.counter").html(time.work);
+  } else {
+     $("p.type").html("Break");
+      count = time.break;
+  };
+  //counting down
+    if (count >= 1) {
+      count -= 1;
+      $("p.counter").html(count);
+    } else {
+      console.log("switch")
+      //play alarm
+       $("#clock").toggleClass("workTime");
+    }
+  };
+
 
 $('#addWork').click(function() {
-  //on + button click add 1 to Work     interval
+  //on + button click add 1 to Work interval
   time.work += 1;
   count = time.work;
   $("p.workInt").html(time.work);
+  //
+
   //updating count var to change with work
   $("p.counter").html(count);
 });
@@ -24,11 +50,11 @@ $('#minusWork').click(function() {
   time.work -= 1;
   count = time.work;
   //avoiding non-existant and negative intervals
-  if (time.work >= 1) {
+
+  if(time.work >= 1) {
     //updating count var to change with work
     $("p.workInt").html(time.work);
     $("p.counter").html(count);
-
   } else {
     time.work = 1;
     count = time.work;
@@ -60,29 +86,21 @@ $("#reset").click(function() {
   console.log("timer reset")
 });
 
-$("#reset").click(function() {
-  count = time.work;
-  console.log("timer reset")
-});
+$("#start-stop").click(function() {
+  $("#start-stop").toggleClass("running");
+    console.log("timer started");
+    //Toggling start and stop button
+    if ($("#start-stop").hasClass("running") == true) {
+     timer = setInterval(function(){ countDown()}, 1000);
+      $("#start-stop").html("Stop");
+    } else {
+      $("#start-stop").html("Start");
+    };
+  });
 
-function countDown() {
-  console.log("countdown started");
-  count -= 1;
-  console.log(count);
-    if(count <= 0){
-    console.log("stop");
-    }
-};
+  
 
-var timer = setInterval(countDown, 1000)
 
-$("#start").click(function() {
-  console.log("timer started");
-  timer();
-});
-
-//click to start and stop clock use inner html and active class to change word from start to stop
-//set time interval
-//add active class to determine when clock should show work or break time
+//pause clock
 //add sound when swtiches from work to break and vice versa
-//reset clock when work timer changed
+//function to convert seconds into munutes and display as string
