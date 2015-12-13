@@ -14,8 +14,10 @@ $("p.type").html("Work");
 $("#start-stop").html("Start");
 $("p.counter").html(count);
 
-function countDown() {
+
+function checkMode() {
   //setting work vs break sessions
+  console.log("checking class")
   if($("#clock").hasClass("workTime") == true) {
     $("p.type").html("Work");
      $("p.counter").html(time.work);
@@ -23,19 +25,23 @@ function countDown() {
      $("p.type").html("Break");
       count = time.break;
   };
-  //counting down
-    if (count >= 1) {
+};
+
+function countDown () {
+  console.log(count)
+   //counting down
+    while(count >= 1) {
       count -= 1;
       $("p.counter").html(count);
-    } else {
-      console.log("switch")
-      //play alarm
-      audio.play();
-       $("#clock").toggleClass("workTime");
-    }
+    } 
+    // while(count <= 0){
+    //   console.log("switch")
+    //   //play alarm
+    //   audio.play();
+    //    $("#clock").toggleClass("workTime");
+    // }
   };
-
-
+ 
 $('#addWork').click(function() {
   //on + button click add 1 to Work interval
   time.work += 1;
@@ -94,7 +100,10 @@ $("#start-stop").click(function() {
     console.log("timer started");
     //Toggling start and stop button
     if ($("#start-stop").hasClass("running") == true) {
-     timer = setInterval(function(){ countDown()}, 1000);
+      checkMode();
+     timer = setInterval(function(){ 
+       countDown();
+     }, 1000);
       $("#start-stop").html("Stop");
     } else {
       $("#start-stop").html("Start");
@@ -105,6 +114,5 @@ $("#start-stop").click(function() {
 
 
 //pause clock
-//add sound when swtiches from work to break and vice versa
 //function to convert seconds into munutes and display as string
-//call countdown again on switch 
+//call countdown again on switch (vs on start- event handler for class switch?)

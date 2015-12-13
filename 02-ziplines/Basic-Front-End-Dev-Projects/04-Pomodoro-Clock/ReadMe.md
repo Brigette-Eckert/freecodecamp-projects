@@ -4,6 +4,7 @@
   Praticed creating shapes in CSS
   Praticed using event handlers
   Praticed using SetInterval and ClearInterval functions
+  Learned how to add audio to an event using Javascript
 
 ```
 #User Stories
@@ -16,7 +17,7 @@
 #Future Features/To Do: 
   ```
   Add CSS to dispaly time passing by
-  Add alarm when timer gets to zero
   Convert seconds into minute & seconds
   Keep clock running when swtiched to break
+  fix flashing to work when swtiching bug
   ```
