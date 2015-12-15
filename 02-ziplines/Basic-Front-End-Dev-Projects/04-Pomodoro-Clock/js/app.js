@@ -45,16 +45,16 @@ function addBreak() {
     $("p.breakInt").html(time.break);
   };
 
-    function minusBreak() {
-      //on - button click subtract one from break interval
-    time.break -= 1;
-    //avoiding non-existant and negative intervals
-    if (time.break >= 1) {
-      $("p.breakInt").html(time.break);
-    } else {
-      time.break = 1;
-    }
-  };
+function minusBreak() {
+    //on - button click subtract one from break interval
+  time.break -= 1;
+  //avoiding non-existant and negative intervals
+  if (time.break >= 1) {
+    $("p.breakInt").html(time.break);
+  } else {
+    time.break = 1;
+  }
+};
 
 function reset() {
     if($("#clock").hasClass("workTime") == false){
@@ -71,9 +71,10 @@ function checkStatus() {
   //setting work vs break sessions
   if($("#clock").hasClass("workTime") == true) {
     $("p.type").html("Work");
+      count = time.work
      $("p.counter").html(time.work);
   } else {
-     $("p.type").html("Break");
+     $("p.type").html("Break")
       count = time.break;
   };
 };
@@ -83,8 +84,9 @@ function countDown(){
     if (count >= 1) {
       count -= 1;
       $("p.counter").html(count);
-    } else {
+    } else if(count ==0)  {
       console.log("switch")
+      console.log(count)
       //play alarm
       audio.play();
        $("#clock").toggleClass("workTime");
@@ -131,4 +133,5 @@ $("#start-stop").click(function() {
 
 
 //function to convert seconds into munutes and display as string
-//call countdown again on switch 
+//add css to fill up 
+//need to loop back to work after first cycle
