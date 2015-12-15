@@ -29,6 +29,7 @@ function countDown() {
       $("p.counter").html(count);
     } else {
       console.log("switch")
+      clearInterval();
       //play alarm
       audio.play();
        $("#clock").toggleClass("workTime");
@@ -97,6 +98,7 @@ $("#start-stop").click(function() {
      timer = setInterval(function(){ countDown()}, 1000);
       $("#start-stop").html("Stop");
     } else {
+      clearInterval(timer);
       $("#start-stop").html("Start");
     };
   });
