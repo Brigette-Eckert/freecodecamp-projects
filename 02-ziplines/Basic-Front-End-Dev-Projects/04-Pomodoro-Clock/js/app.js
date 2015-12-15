@@ -67,7 +67,7 @@ function reset() {
   };
 
 
-function countDown() {
+function checkStatus() {
   //setting work vs break sessions
   if($("#clock").hasClass("workTime") == true) {
     $("p.type").html("Work");
@@ -76,7 +76,10 @@ function countDown() {
      $("p.type").html("Break");
       count = time.break;
   };
-  //counting down
+};
+
+
+function countDown(){
     if (count >= 1) {
       count -= 1;
       $("p.counter").html(count);
@@ -85,9 +88,9 @@ function countDown() {
       //play alarm
       audio.play();
        $("#clock").toggleClass("workTime");
+       checkStatus();
     }
   };
-
   
 $('#addWork').click(function(){
     addWork();
@@ -129,4 +132,3 @@ $("#start-stop").click(function() {
 
 //function to convert seconds into munutes and display as string
 //call countdown again on switch 
-//if hit reset after hitting stop it doesn't work 
