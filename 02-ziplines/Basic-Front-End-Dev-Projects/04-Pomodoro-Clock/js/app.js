@@ -1,8 +1,10 @@
 //set init var
+//times in seconds 
 var time = {
-  work: 25,
-  break: 5
+  work: 15,
+  break: 300,
 };
+
 var count = time.work;
   //storing function in var to be able to stop timer
 var timer ;
@@ -12,15 +14,33 @@ $("p.workInt").html(time.work);
 $("p.breakInt").html(time.break);
 $("p.type").html("Work");
 $("#start-stop").html("Start");
-$("p.counter").html(count);
+
+function timeDisplay() {
+  console.log("the count is" + " " + count);
+  var min;
+  var sec;
+   //set dispaly to xx:xx vs one string  
+  if(count >= 60){
+     min = count/60;
+     sec = count%60;
+     count  = min.toPrecision(2) + ":" + sec.toPrecision(2);
+  } else {
+    min = 0;
+    sec = count;
+      //.toPrecisison causing issue with decmials if used outside of condtionals +0 is a work around for display
+    count  = "0" + min + ":" + sec.toPrecision(2);
+   }
+
+   $("p.counter").html(count);
+
+};
 
 function addWork() {
      time.work += 1;
     count = time.work;
     $("p.workInt").html(time.work);
-
     //updating count var to change with work
-    $("p.counter").html(count);
+    timeDisplay();
   };
 
 function minusWork() {
@@ -31,7 +51,7 @@ function minusWork() {
     if(time.work >= 1) {
       //updating count var to change with work
       $("p.workInt").html(time.work);
-      $("p.counter").html(count);
+      timeDisplay();
     } else {
       time.work = 1;
       count = time.work;
@@ -43,6 +63,7 @@ function addBreak() {
     //on + button click add 1 to Break     interval
     time.break += 1;
     $("p.breakInt").html(time.break);
+    timeDisplay();
   };
 
 function minusBreak() {
@@ -51,6 +72,7 @@ function minusBreak() {
   //avoiding non-existant and negative intervals
   if (time.break >= 1) {
     $("p.breakInt").html(time.break);
+    timeDisplay();
   } else {
     time.break = 1;
   }
@@ -61,7 +83,7 @@ function reset() {
     $("#clock").addClass("workTime");
     }
     count = time.work;
-    $("p.counter").html(count);
+    timeDisplay();
     console.log("timer reset")    
 
   };
@@ -94,6 +116,10 @@ function countDown(){
     }
   };
   
+
+timeDisplay(); 
+//when calling timeDisplay function here functions break
+
 $('#addWork').click(function(){
     addWork();
 });
@@ -132,6 +158,5 @@ $("#start-stop").click(function() {
   
 
 
-//function to convert seconds into munutes and display as string
+
 //add css to fill up 
-//need to loop back to work after first cycle
