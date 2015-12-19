@@ -161,6 +161,3 @@ $("#start-stop").click(function() {
       $("#start-stop").html("Start");
     };
   });
-
-  
-//add css to fill up 

@@ -17,7 +17,4 @@
 #Future Features/To Do: 
   ```
   Add CSS to dispaly time passing by
-  Convert seconds into minute & seconds
-  Keep clock running when swtiched to break
-  fix flashing to work when swtiching bug
   ```
