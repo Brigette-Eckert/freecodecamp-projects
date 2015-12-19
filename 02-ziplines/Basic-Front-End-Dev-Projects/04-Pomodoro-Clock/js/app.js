@@ -4,20 +4,19 @@ var time = {
   work: 1500,
   break: 300,
 };
+var timeOutput;
 
 var count = time.work;
   //storing function in var to be able to stop timer
 var timer ;
 var audio = new Audio('255101__soneproject__jingle2.wav');
-//set inner html to respective varibles
-$("p.workInt").html(time.work);
-$("p.breakInt").html(time.break);
+//intinal setup of variables in html for buttons and type 
 $("p.type").html("Work");
 $("#start-stop").html("Start");
-$("p.counter").html(count);
 
+
+//Take in seconds and returns string xx:xx
 function timeDisplay(timeInput){
-  //Take in seconds and returns string xx:xx
   var minCon = timeInput/60
   var min = (Math.floor(minCon)).toString();
   var sec = (timeInput%60).toString();
@@ -25,42 +24,46 @@ function timeDisplay(timeInput){
   if(min.length == 1 && sec.length != 1){
     console.log("min padding added");
     var paddedMin = "0" + min;
-    var timeOutput =  paddedMin + ":" + sec;
+    timeOutput =  paddedMin + ":" + sec;
   }else if(sec.length == 1 && min.length != 1){
     console.log("sec padding added");
     var paddedSec= "0" + sec;
-    var timeOutput =  min + ":" + paddedSec;
+    timeOutput =  min + ":" + paddedSec;
   } else if(min.length == 1 && sec.length == 1){
   console.log("both min & sec padding added")
     var paddedMin = "0" + min;
     var paddedSec= "0" + sec;
-    var timeOutput =  paddedMin + ":" + paddedSec;
+   timeOutput =  paddedMin + ":" + paddedSec;
   }else {
-  var timeOutput =  min + ":" + sec;
+  timeOutput =  min + ":" + sec;
   };
+  console.log(timeOutput)
   return timeOutput;
 }
- 
+
+//intinal setup of var in html where time is dispalyed on page
+$("p.counter").html(timeDisplay(count));
+$("p.workInt").html(timeDisplay(time.work));
+$("p.breakInt").html(timeDisplay(time.break));
+
 function addWork() {
     time.work += 1;
     count = time.work;
-    // timeDisplay(count);
-    $("p.workInt").html(count);
+    $("p.workInt").html(timeDisplay(count));
     //updating count var to change with work
-    $("p.counter").html(count);
+    $("p.counter").html(timeDisplay(count));
   };
 
 function minusWork() {
     //on - button click subtract 1 to Work interval
     time.work -= 1;
     count = time.work;
-    //not sure why this is coming up as undefine
-    // timeDisplay(count);
-     $("p.workInt").html(count);
+     $("p.counter").html(timeDisplay(count));
+     $("p.workInt").html(timeDisplay(count));
     //avoiding non-existant and negative intervals
     if(time.work >= 1) {
       //updating count var to change with work
-      $("p.workInt").html(count);
+      $("p.workInt").html(timeDisplay(count));
       // timeDisplay();
     } else {
       time.work = 1;
@@ -71,7 +74,7 @@ function minusWork() {
 function addBreak() {
     //on + button click add 1 to Break     interval
     time.break += 1;
-    $("p.breakInt").html(time.break);
+    $("p.breakInt").html(timeDisplay(time.break));
   };
 
 function minusBreak() {
@@ -79,7 +82,7 @@ function minusBreak() {
   time.break -= 1;
   //avoiding non-existant and negative intervals
   if (time.break >= 1) {
-    $("p.breakInt").html(time.break);
+    $("p.breakInt").html(timeDisplay(time.break));
   } else {
     time.break = 1;
   }
@@ -91,7 +94,7 @@ function reset() {
     }
     count = time.work;
     console.log("timer reset")    
-    $("p.counter").html(count);
+    $("p.counter").html(timeDisplay(count));
   };
 
 
@@ -100,10 +103,11 @@ function checkStatus() {
   if($("#clock").hasClass("workTime") == true) {
     $("p.type").html("Work");
       count = time.work
-     $("p.counter").html(time.work);
+     $("p.counter").html(timeDisplay(time.work));
   } else {
      $("p.type").html("Break")
       count = time.break;
+      $("p.counter").html(timeDisplay(time.break));
   };
 };
 
@@ -112,7 +116,7 @@ function countDown(){
     if (count >= 1) {
       count -= 1;
       console.log(count);
-      $("p.counter").html(count);
+      $("p.counter").html(timeDisplay(count));
     } else if(count == 0)  {
       console.log("switch")
       console.log(count)
@@ -123,10 +127,6 @@ function countDown(){
     }
   };
   
-
-// timeDisplay(count); 
-//when calling timeDisplay function here functions break
-
 $('#addWork').click(function(){
     addWork();
 });
@@ -163,7 +163,4 @@ $("#start-stop").click(function() {
   });
 
   
-
-
-//get timer working while using display 
 //add css to fill up 
