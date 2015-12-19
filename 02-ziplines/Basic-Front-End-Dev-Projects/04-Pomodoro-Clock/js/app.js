@@ -1,7 +1,7 @@
 //set init var
 //times in seconds 
 var time = {
-  work: 15,
+  work: 1500,
   break: 300,
 };
 
@@ -21,13 +21,22 @@ function timeDisplay() {
   var sec;
    //set dispaly to xx:xx vs one string  
   if(count >= 60){
-     min = count/60;
+     min = Math.floor(count/60);
      sec = count%60;
-     count  = min.toPrecision(2) + ":" + sec.toPrecision(2);
+     //setting dispaly so 0s are in correct place when needed
+      if(sec == 0) {
+        count  = min.toPrecision(2) + ":" + sec + "0";
+      } else if(min < 10) {
+          count  = "0" + min + ":" + sec;
+      } else if(min == 0) {
+          count  = "00" + ":" + sec;
+      } else {
+        count  = min + ":" + sec;
+      }
+     
   } else {
     min = 0;
     sec = count;
-      //.toPrecisison causing issue with decmials if used outside of condtionals +0 is a work around for display
     count  = "0" + min + ":" + sec.toPrecision(2);
    }
 
@@ -106,7 +115,7 @@ function countDown(){
     if (count >= 1) {
       count -= 1;
       $("p.counter").html(count);
-    } else if(count ==0)  {
+    } else if(count == 0)  {
       console.log("switch")
       console.log(count)
       //play alarm
@@ -158,5 +167,5 @@ $("#start-stop").click(function() {
   
 
 
-
+//get timer working while using display 
 //add css to fill up 
