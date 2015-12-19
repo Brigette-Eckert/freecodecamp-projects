@@ -16,37 +16,35 @@ $("p.type").html("Work");
 $("#start-stop").html("Start");
 $("p.counter").html(count);
 
-function timeDisplay(timeInput) {
-  console.log("the count is" + " " + timeInput);
-  var min;
-  var sec;
-   //set dispaly to xx:xx vs one string  
-  if(timeInput >= 60){
-     min = Math.floor(timeInput/60);
-     sec = timeInput%60;
-     //setting dispaly so 0s are in correct place when needed
-      if(sec == 0) {
-        count  = min.toPrecision(2) + ":" + sec + "0";
-      } else if(min < 10) {
-          count  = "0" + min + ":" + sec;
-      } else if(min == 0) {
-        //fix seconds display with other else if &&
-          count  = "00" + ":" + sec;
-      } else {
-        count  = min + ":" + sec;
-      }
-  } else {
-    min = 0;
-    sec = timeInput;
-    count  = "0" + min + ":" + sec.toPrecision(2);
-   }
-   $("p.counter").html(count);
-};
-
+function timeDisplay(timeInput){
+  //Take in seconds and returns string xx:xx
+  var minCon = timeInput/60
+  var min = (Math.floor(minCon)).toString();
+  var sec = (timeInput%60).toString();
+  //adding 0s if second or min is only one char long
+  if(min.length == 1 && sec.length != 1){
+    console.log("min padding added");
+    var paddedMin = "0" + min;
+    var timeOutput =  paddedMin + ":" + sec;
+  }else if(sec.length == 1 && min.length != 1){
+    console.log("sec padding added");
+    var paddedSec= "0" + sec;
+    var timeOutput =  min + ":" + paddedSec;
+  } else if(min.length == 1 && sec.length == 1){
+  console.log("both min & sec padding added")
+    var paddedMin = "0" + min;
+    var paddedSec= "0" + sec;
+    var timeOutput =  paddedMin + ":" + paddedSec;
+  }else {
+  var timeOutput =  min + ":" + sec;
+  };
+  return timeOutput;
+}
+ 
 function addWork() {
     time.work += 1;
     count = time.work;
-    timeDisplay(count);
+    // timeDisplay(count);
     $("p.workInt").html(count);
     //updating count var to change with work
     $("p.counter").html(count);
@@ -57,18 +55,17 @@ function minusWork() {
     time.work -= 1;
     count = time.work;
     //not sure why this is coming up as undefine
-    timeDisplay(count);
+    // timeDisplay(count);
      $("p.workInt").html(count);
     //avoiding non-existant and negative intervals
     if(time.work >= 1) {
       //updating count var to change with work
       $("p.workInt").html(count);
-      timeDisplay();
+      // timeDisplay();
     } else {
       time.work = 1;
       count = time.work;
-    }
-      
+    }  
   };
 
 function addBreak() {
@@ -94,7 +91,7 @@ function reset() {
     }
     count = time.work;
     console.log("timer reset")    
-
+    $("p.counter").html(count);
   };
 
 
@@ -127,7 +124,7 @@ function countDown(){
   };
   
 
-timeDisplay(count); 
+// timeDisplay(count); 
 //when calling timeDisplay function here functions break
 
 $('#addWork').click(function(){
