@@ -1,0 +1,59 @@
+body {
+  background-color: #121518; }
+
+#main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  height: 400px;
+  width: 240px;
+  border: #3e4853 3px solid;
+  background: #778899;
+  border-radius: 5%; }
+
+#screen {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 20px;
+  text-align: center;
+  height: 25%;
+  width: 80%;
+  background: #0f0f0a;
+  color: #66e0ff;
+  border-radius: 5%; }
+
+#buttons {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 20px;
+  text-align: center;
+  margin-top: 150px;
+  width: 192px;
+  height: 220px; }
+
+.row button {
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  background: #495561;
+  border-radius: 15%;
+  border-color: #3e4853;
+  color: #568e90; }
+.row.row-bottom {
+  float: left; }
+
+#add {
+  background: #495561;
+  color: #568e90;
+  border-color: #3e4853;
+  float: right;
+  border-radius: 15%;
+  margin: 3px;
+  width: 40px;
+  height: 84px; }
+
+/*# sourceMappingURL=main.css.map */

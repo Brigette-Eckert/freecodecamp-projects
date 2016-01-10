@@ -1,0 +1,81 @@
+$button_color: darken(#778899, 20%);
+$background_color: #778899;
+$screen_color: #0f0f0a;
+$screen_text: #66e0ff; 
+$button_text: #568e90; 
+
+@mixin num_button {
+  width:  40px;
+  height: 40px;
+  margin: 2px;
+  background: $button_color;
+  border-radius: 15%;
+  border-color: darken($button_color, 5%);
+  color: $button_text;
+}
+
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@mixin centerer-sides {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 20px;
+  text-align: center;
+}
+
+body {
+  background-color: darken($button_color, 25%);
+}
+
+#main {
+  @include centerer;
+  height: 400px;
+  width: 240px;
+  border: darken($button_color, 5%) 3px solid;
+  background: #778899;
+  border-radius: 5%;
+}
+
+#screen {
+  @include centerer-sides;
+  height: 25%;
+  width: 80%;
+  background: $screen_color;
+  color: $screen_text;
+  border-radius: 5%;
+}
+
+#buttons {
+  @include centerer-sides;
+  margin-top: 150px;
+  width: 192px;
+  height: 220px;
+}
+
+.row {
+    button {
+      @include num_button;
+    }
+    &.row-bottom {
+      float:left;
+    }
+  }
+
+#add {
+    background: $button_color;
+    color: $button_text;
+    border-color: darken($button_color, 5%);
+  float:right;
+    border-radius: 15%;
+    margin: 3px;
+    width: 40px;
+    height: 84px;
+}
