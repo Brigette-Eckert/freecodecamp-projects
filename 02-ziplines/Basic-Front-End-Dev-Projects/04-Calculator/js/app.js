@@ -12,10 +12,7 @@ $(".num").click(function(e){
   runningTotal += num; 
   console.log("the total is " + runningTotal);
   $("#display").html(buildString);
-  
 });
-
-
 
 //Clear Buttons
 
@@ -33,7 +30,53 @@ $("#clear_screen").click(function(){
   console.log(buildString);
 });
 
+//Ops 
+
+$(".op").click(function(e){
+  var op = e.target.innerHTML;
+  buildString = op;
+  runningTotal += op; 
+  $("#display").html(buildString);
+});
+
+$("#add").click(function(){
+   runningTotal += "+";
+    buildString = "+";
+    $("#display").html(buildString);
+  
+});
+
+$("#percent").click(function(){
+  if(runningTotal.indexOf("%") == -1) {
+    buildString += "%";
+    runningTotal += "/100"; 
+  } else {
+    console.log("there is already a percent sign")
+  }
+    $("#display").html(buildString);
+});
 
 
+$("#decimal").click(function(){
+  if(runningTotal.indexOf(".") == -1 && runningTotal.indexOf("%") == -1)  {
+    buildString += ".";
+    runningTotal += "."; 
+  } else {
+    console.log("can't add a decimal here")
+  }
+    $("#display").html(buildString);
+});
 
-//click ce to clear current screen but not build string
+$("#equal").click(function(){
+  //parseInt or use mathEval
+  try {
+   var finalVal = eval(runningTotal);
+   $("#display").html(finalVal);
+  } catch(err) {
+     $("#display").html("Error");
+    }
+    //reset
+    buildString = "";
+    runningTotal = "";
+});
+
