@@ -5,16 +5,15 @@ var buildString = "";
 var runningTotal = ""; 
 //running total will hold the whole nummber until presssing equal
 
-//set display up
-$("#display").html(buildString);
-
 //Number Buttons
 $(".num").click(function(e){
-  buildString += e.target.innerHTML;
+  var num = e.target.innerHTML;
+  buildString += num;
+  runningTotal += num; 
+  console.log("the total is " + runningTotal);
   $("#display").html(buildString);
   
 });
-
 
 
 
@@ -22,16 +21,17 @@ $(".num").click(function(e){
 
 $("#all_clear").click(function(){
   buildString = "";
+   runningTotal = "";
   $("#display").html(buildString);
   console.log("all clear")
 });
 
 $("#clear_screen").click(function(){
   $("#display").html("");
+  buildString = "";
   console.log("screen cleared");
   console.log(buildString);
 });
-
 
 
 
