@@ -42,14 +42,16 @@ function success(pos) {
 					console.log("display in fahrenheit")
 			};
 
-	  	$('#location').html(data.name +", "+ data.sys.country);
-	  	$('#condition').html(data.weather[0].main);
-	  	$('#icon').html("<img src=http://openweathermap.org/img/w/" + data.weather[0].icon+".png>")
-	  	$('#description').html(data.weather[0].description);
-	  	$('#humid').html("<p> Humidity: " + data.main.humidity +"% </p>");
-	  	
+		  	$('#location').html(data.name +", "+ data.sys.country);
+		  	$('#condition').html(data.weather[0].main);
+		  	$('#icon').html("<img src=http://openweathermap.org/img/w/" + data.weather[0].icon+".png>")
+		  	$('#description').html(data.weather[0].description);
+		  	$('#humid').html("<p> Humidity: " + data.main.humidity +"% </p>");
 		});
+		
 
+		
+		
 	};
 	function error(err) {
 	  console.warn('ERROR(' + err.code + '): ' + err.message);
