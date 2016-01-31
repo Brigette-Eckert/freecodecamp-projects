@@ -12,8 +12,8 @@ function success(pos) {
 		$.getJSON("http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=e4e1425994f5fa474cdd4b36231633c9", function(data){
 	  	console.log(data);
 	  	//convert tempatures from K and round
-	  	var tempC = ((data.main.temp)-273.15).toFixed(1);
-	  	var tempF = ((data.main.temp)*(9/5)-459.67).toFixed(1);
+	  	var tempC = ((data.main.temp)-273.15).toFixed(1) + "° C";
+	  	var tempF = ((data.main.temp)*(9/5)-459.67).toFixed(1) + "° F";
 
 	  	//convert windspeed
 	  	var windSpeedMetric = data.wind.speed + " m/s";
@@ -24,13 +24,13 @@ function success(pos) {
 
 		function unitsDisplay(){
 			if($("#mainDisplay").hasClass('celsius')){
-				$('#tempDisplay').html(tempC+"°");
+				$('#tempDisplay').html(tempC);
 				$('#wind').html("<p> Wind Speed: " + windSpeedMetric +"</p>");
 				console.log("display in celsius")
 			}; 
 
 			if($("#mainDisplay").hasClass('fahrenheit')){
-				$('#tempDisplay').html(tempF+"°");
+				$('#tempDisplay').html(tempF);
 				$('#wind').html("<p> Wind Speed: " + windSpeedImperial +"</p>");
 					console.log("display in fahrenheit")
 			};
@@ -47,10 +47,10 @@ function success(pos) {
 
 		};
 			unitsDisplay();
-		  	$('#location').html(data.name +", "+ data.sys.country);
+		  	$('#location').html("<h3>" + data.name +", "+ data.sys.country +"</h3>");
 		  	$('#condition').html(data.weather[0].main);
 		  	$('#icon').html("<img src=http://openweathermap.org/img/w/" + data.weather[0].icon+".png>")
-		  	$('#description').html(data.weather[0].description);
+		  	$('#description').html("<p> Description: " + data.weather[0].description +"</p>");
 		  	$('#humid').html("<p> Humidity: " + data.main.humidity +"% </p>");
 		});
 		
