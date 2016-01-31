@@ -1,12 +1,3 @@
-
-//toogle between imperial and metric 
-$("#celButton").click(function(){
-	$("#mainDisplay").removeClass("celsius fahrenheit").addClass("celsius")
-});
-$("#farButton").click(function(){
-	$("#mainDisplay").removeClass("celsius fahrenheit").addClass("fahrenheit");
-});
-
 //get location
 function success(pos) {
 	  var crd = pos.coords;
@@ -30,6 +21,8 @@ function success(pos) {
 	  	var windSpeedImperial = ((data.wind.speed)*2.2369).toFixed(1) + "mph";
 
 		//Display Conditons (Celsius is default)
+
+		function unitsDisplay(){
 			if($("#mainDisplay").hasClass('celsius')){
 				$('#tempDisplay').html(tempC+"°");
 				$('#wind').html("<p> Wind Speed: " + windSpeedMetric +"</p>");
@@ -42,6 +35,18 @@ function success(pos) {
 					console.log("display in fahrenheit")
 			};
 
+			//toogle between imperial and metric 
+			$("#celButton").click(function(){
+				$("#mainDisplay").removeClass("celsius fahrenheit").addClass("celsius");
+				unitsDisplay()
+			});
+			$("#farButton").click(function(){
+				$("#mainDisplay").removeClass("celsius fahrenheit").addClass("fahrenheit");
+				unitsDisplay()
+			});
+
+		};
+			unitsDisplay();
 		  	$('#location').html(data.name +", "+ data.sys.country);
 		  	$('#condition').html(data.weather[0].main);
 		  	$('#icon').html("<img src=http://openweathermap.org/img/w/" + data.weather[0].icon+".png>")
@@ -58,5 +63,4 @@ function success(pos) {
 	};
 
 navigator.geolocation.getCurrentPosition(success, error);
-
 

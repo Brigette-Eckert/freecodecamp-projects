@@ -1,4 +1,9 @@
+$main-color: #00cccc;
+// $main-text-color: ;
 
+body{
+	background-color: $main-color;
+}
 #mainDisplay{
 	text-align: center;
 }
