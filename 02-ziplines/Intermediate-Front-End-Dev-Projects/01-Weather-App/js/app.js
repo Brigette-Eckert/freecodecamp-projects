@@ -14,14 +14,17 @@ function success(pos) {
 	  	var tempK = (data.main.temp).toFixed(1);
 	  	var tempC = ((data.main.temp)-273.15).toFixed(1);
 	  	var tempF = ((data.main.temp)*(9/5)-459.67).toFixed(1);
+
+	  	var windSpeedMetric = data.wind.speed + " m/s";
+	  	//need to convert to imperial 
+	  	var windSpeedImperial = data.wind.speed + "mph";
 	  
 	  	$('#tempDisplay').html(tempC+"°");
 	  	//+"<img src="+data.weather[0].icon+">"
 	  	$('#location').html(data.name +", "+ data.sys.country);
 	  	$('#condition').html("<p>"+data.weather[0].main+"</p>"+"<p>"+data.weather[0].description+"</p>");
-	  	$('#wind').html("<p> Wind Speed: " + data.wind.speed +"</p>");
-	  	$('#humid').html("<p> Humidity: " + data.main.humidity +"<p>");
-	  	$('#sunTime').html("<p id='sunrise'>Sunrise: " + data.sys.sunrise + "</p>"+"<p id='sunset'>Sunset: " +data.sys.sunrise + "</p>");
+	  	$('#wind').html("<p> Wind Speed: " + windSpeedMetric +"</p>");
+	  	$('#humid').html("<p> Humidity: " + data.main.humidity +"% </p>");
 	  	
 		});
 

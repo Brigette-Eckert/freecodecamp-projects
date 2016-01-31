@@ -1,8 +1,9 @@
 
 #What I learned from this project:
  ```
-
-
+Praticed using Jquery API calls
+Learned how to use API keys 
+Pratice using Sass
 
 ```
 #User Stories
@@ -15,5 +16,6 @@
 
 #Future Features/To Do: 
   ```
+  Add sunset and sunrise times (returned in API as Unix- conver to local time)
 
   ```
