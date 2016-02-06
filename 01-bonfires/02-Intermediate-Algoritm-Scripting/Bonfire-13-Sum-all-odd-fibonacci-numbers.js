@@ -13,24 +13,25 @@ function sumFibs(num) {
     var fibs = [1, 1];
 
 
-//FOR loop running way too long (fib gets bigger than number at 15)
-    for(i = 1; sum <= num-1; i++) {
+    for(i = 1; sum < num-1; i++) {
         // console.log("i at " + i)
         var newFib = (fibs[i]) + (fibs[i-1]);
-        console.log("new fib is " + newFib);
-        fibs.push(newFib);
-          if(newFib%2 != 0){
-            //&& newFib < Num causes infiite loop but by itself its okay. While doesnt run
-            sum += newFib;
-            }
+        if(newFib > num) {
+            break;
         }
-          
+        // console.log("new fib is " + newFib);
+        fibs.push(newFib);
+        if(newFib%2 !== 0){
+            sum += newFib;
+        }
+    }
+      
      console.log("The sum is " + sum);
  return sum;
 }
 
-// sumFibs(1);
-// sumFibs(4);
-// sumFibs(1000);
-sumFibs(75024);
-// sumFibs(75025);
+sumFibs(1);
+sumFibs(4);
+sumFibs(1000);
+sumFibs(75024); 
+sumFibs(75025);
