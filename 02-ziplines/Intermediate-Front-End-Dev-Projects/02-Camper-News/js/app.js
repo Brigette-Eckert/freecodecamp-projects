@@ -1,0 +1,1 @@
+// API End point http://www.freecodecamp.com/news/hot
