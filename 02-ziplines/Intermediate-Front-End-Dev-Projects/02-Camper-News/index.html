@@ -10,7 +10,19 @@
 	<h1> Camper News </h1>
 
 	<div ng-controller="mainCtrl">
-		<div ng-repeat="story in stories"></div>
+		<div class="story-block" ng-repeat="story in stories">
+			<h3> {{story.headline}} </h3>
+			<p> {{story.storyLink}}</p>
+			<a ng-href="{{story.link}}"> <img ng-src="{{story.image}}"></a>
+			<p> Posted On: {{story.timePosted}} </p>
+			<p> likes: {{story.rank}} </p>
+			<div class="author">
+			<p> written by: <a ng-href="http://www.freecodecamp.com/{{story.author.username}}" >
+			<img ng-src="{{story.author.picture}}">
+			 {{story.author.username}} </a> </p>
+			</div>
+
+		</div>
 
 	</div>
 

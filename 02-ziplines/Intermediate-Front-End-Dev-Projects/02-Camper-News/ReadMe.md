@@ -1,7 +1,9 @@
 
 #What I learned from this project:
  ```
-
+ Praticed creating a single page angular applicaton
+ Praticed api calls in angular 
+ Praticed using Sass
 
 ```
 #User Stories
