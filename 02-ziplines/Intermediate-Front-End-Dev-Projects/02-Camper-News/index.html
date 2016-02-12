@@ -5,6 +5,8 @@
 	<title>Camper News</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
+
 </head>`
 <body ng-app="camperNewsApp">
 	<h1> Camper News </h1>
@@ -15,7 +17,7 @@
 			<p> {{story.storyLink}}</p>
 			<a ng-href="{{story.link}}"> <img ng-src="{{story.image}}"></a>
 			<p> Posted On: {{story.timePosted}} </p>
-			<p> likes: {{story.rank}} </p>
+			<p> <i class="fa fa-star"></i> {{story.rank}} </p>
 			<div class="author">
 			<p> written by: <a ng-href="http://www.freecodecamp.com/{{story.author.username}}" >
 			<img ng-src="{{story.author.picture}}">

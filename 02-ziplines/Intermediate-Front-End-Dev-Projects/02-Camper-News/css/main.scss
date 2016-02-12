@@ -1,16 +1,20 @@
-$purple-prime: #503C91;
-$blue-prime: #39538D;
-$aqua-prime: #2B7E7E;
+@import "bourbon/bourbon";
+@import "neat/neat"
+@import "vars.scss";
 
 //http://paletton.com/#uid=53L0u0kleqtbzEKgVuIpcmGtdhZ
 body {
-	background: $blue-prime;
+	background: $blue;
 }
 h1 {
 	text-align: center;
 }
 .story-block {
-	background: $purple-prime;
+	background: $purple;
 	text-align: center;
 	margin: 5px;
+}
+
+.fa.fa-star{
+color: $gold;
 }
