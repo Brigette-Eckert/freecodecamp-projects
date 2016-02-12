@@ -1,38 +1,43 @@
-/*
-Error: Invalid CSS after "...ort "neat/neat"": expected selector or at-rule, was "@import "vars.s..."
-        on line 3 of ./main.scss
+html {
+  box-sizing: border-box; }
 
-1: @import "bourbon/bourbon";
-2: @import "neat/neat"
-3: @import "vars.scss";
-4: 
-5: //http://paletton.com/#uid=53L0u0kleqtbzEKgVuIpcmGtdhZ
-6: body {
-7: 	background: $blue;
-8: }
+*, *::after, *::before {
+  box-sizing: inherit; }
 
-Backtrace:
-./main.scss:3
-/usr/share/gems/gems/sass-3.4.14/lib/sass/scss/parser.rb:1162:in `expected'
-/usr/share/gems/gems/sass-3.4.14/lib/sass/scss/parser.rb:1098:in `expected'
-/usr/share/gems/gems/sass-3.4.14/lib/sass/scss/parser.rb:43:in `parse'
-/usr/share/gems/gems/sass-3.4.14/lib/sass/engine.rb:393:in `_to_tree'
-/usr/share/gems/gems/sass-3.4.14/lib/sass/engine.rb:368:in `_render_with_sourcemap'
-/usr/share/gems/gems/sass-3.4.14/lib/sass/engine.rb:285:in `render_with_sourcemap'
-/usr/share/gems/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
-/usr/share/gems/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/usr/share/gems/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:209:in `each'
-/usr/share/gems/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/usr/share/gems/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
-/usr/share/gems/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:328:in `block in watch'
-/usr/share/gems/gems/listen-2.10.0/lib/listen/listener.rb:291:in `call'
-/usr/share/gems/gems/listen-2.10.0/lib/listen/listener.rb:291:in `_process_changes'
-/usr/share/gems/gems/listen-2.10.0/lib/listen/listener.rb:255:in `block in _wait_for_changes'
-/usr/share/gems/gems/listen-2.10.0/lib/listen/listener.rb:238:in `loop'
-/usr/share/gems/gems/listen-2.10.0/lib/listen/listener.rb:238:in `_wait_for_changes'
-/usr/share/gems/gems/listen-2.10.0/lib/listen/listener.rb:327:in `block in _start_wait_thread'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...ort \"neat/neat\"\": expected selector or at-rule, was \"@import \"vars.s...\"\A         on line 3 of ./main.scss\A \A 1: @import \"bourbon/bourbon\";\A 2: @import \"neat/neat\"\A 3: @import \"vars.scss\";\A 4: \A 5: //http://paletton.com/#uid=53L0u0kleqtbzEKgVuIpcmGtdhZ\A 6: body {\A 7: 	background: $blue;\A 8: }"; }
+body {
+  background: #39538D;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  body::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+h1 {
+  text-align: center;
+  font-family: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif; }
+
+.story-block {
+  background: #503C91;
+  text-align: center;
+  margin: 10px;
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
+  font-size: 20px;
+  width: 350px;
+  height: 500px;
+  padding: 50px; }
+
+.story-description {
+  font-style: italic; }
+
+.article img {
+  width: 85%; }
+
+.author img {
+  width: 30%; }
+
+.fa.fa-star {
+  color: #B59926; }
+
+/*# sourceMappingURL=main.css.map */

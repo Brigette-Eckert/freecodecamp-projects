@@ -1,20 +1,44 @@
 @import "bourbon/bourbon";
-@import "neat/neat"
+@import "neat/neat";
 @import "vars.scss";
 
 //http://paletton.com/#uid=53L0u0kleqtbzEKgVuIpcmGtdhZ
 body {
 	background: $blue;
+	@include outer-container(100%)
 }
 h1 {
 	text-align: center;
+	font-family: $lucida-grande;
 }
+
+
 .story-block {
 	background: $purple;
 	text-align: center;
-	margin: 5px;
+	margin: 10px;
+	font-family: $georgia;
+	font-size: 20px;
+	width: 350px;
+	height: 500px;
+	padding: 50px;
 }
+
+.story-description {
+	font-style: italic;
+}
+
+.article img {
+ width: 85%;
+}
+
+.author img{
+width: 30%;
+}
+
 
 .fa.fa-star{
 color: $gold;
 }
+
+//look into flexbox for rows 
