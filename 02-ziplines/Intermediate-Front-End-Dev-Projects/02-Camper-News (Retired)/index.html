@@ -14,10 +14,10 @@
 	<div ng-controller="mainCtrl">
 		<div class="story-block" ng-repeat="story in stories">
 			<div class="article">
-				<h3> {{story.headline}} </h3>
-				<p class="story-description"> {{story.storyLink}}</p>
+				<h3 class="title"> {{story.headline}} </h3>
 				<a ng-href="{{story.link}}"> <img ng-src="{{story.image}}"></a>
-				<p> Posted On: {{story.timePosted | date:'short'}} </p>
+				<p class="story-description"> {{story.storyLink}}</p>
+				<p> Posted On: {{story.timePosted | date:''}} </p>
 				<p> <i class="fa fa-star"></i> {{story.rank}} </p>
 			</div>
 			<div class="author">

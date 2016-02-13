@@ -1,4 +1,9 @@
+#Notes
+```
+Project Retired by FCC 02/12/16 while working on project. API may be depreciated in the future.
 
+```
+ 
 #What I learned from this project:
  ```
  Praticed creating a single page angular applicaton
@@ -18,3 +23,4 @@
   ```
 
   ```
+

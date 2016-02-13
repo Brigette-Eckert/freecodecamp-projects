@@ -21,11 +21,16 @@ h1 {
 	font-size: 20px;
 	width: 350px;
 	height: 500px;
-	padding: 50px;
+}
+
+.title {
+	padding-top: 50px;
 }
 
 .story-description {
 	font-style: italic;
+	background: $aqua;
+
 }
 
 .article img {
@@ -42,3 +47,7 @@ color: $gold;
 }
 
 //look into flexbox for rows 
+
+//standard size- pixels instead of percents? for images
+//move description right under or on top of image
+//remove text decoration from author name 

@@ -25,11 +25,14 @@ h1 {
   font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
   font-size: 20px;
   width: 350px;
-  height: 500px;
-  padding: 50px; }
+  height: 500px; }
+
+.title {
+  padding-top: 50px; }
 
 .story-description {
-  font-style: italic; }
+  font-style: italic;
+  background: #2B7E7E; }
 
 .article img {
   width: 85%; }
