@@ -3,13 +3,13 @@
  ```
  Using the media wiki api
  Using the wikipedia special random page feature 
+ praticed using jquery 
+ praticued using html forms
 ```
 #User Stories
 ```
 1. As a user I can search Wikipedia entries in a search box and see the resulting Wikipedia entries.
 2. As a user I can lick a button to see a random Wikipedia entry.
-
-
 ```
 
 #Future Features/To Do: 
