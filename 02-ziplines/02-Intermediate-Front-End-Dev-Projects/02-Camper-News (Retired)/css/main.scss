@@ -5,7 +5,7 @@
 //http://paletton.com/#uid=53L0u0kleqtbzEKgVuIpcmGtdhZ
 body {
 	background: $blue;
-	@include outer-container(100%)
+	@include outer-container;
 }
 h1 {
 	text-align: center;
@@ -13,41 +13,53 @@ h1 {
 }
 
 
-.story-block {
-	background: $purple;
-	text-align: center;
-	margin: 10px;
-	font-family: $georgia;
+.title {
 	font-size: 20px;
-	width: 350px;
-	height: 500px;
+	font-weight: bold;
+	word-wrap: break-word;
+	text-align: center; 
 }
 
-.title {
-	padding-top: 50px;
+.story-block{
+	@include span-columns(4);
+	background: $purple;
+	margin: 10px 5px;
+	font-family: $georgia;
+	height: 475px;
+	font-size: 15px;
+}
+
+.date {
+	text-align: center;
 }
 
 .story-description {
 	font-style: italic;
+	font-size: 20px;
 	background: $aqua;
-
+	height: 100px;
+	margin: -2.5px;
+	width: 295px;
 }
+
 
 .article img {
- width: 85%;
+ width: 295px;
+ height: 195px;
+ margin: auto 25px 0px 25px;
+ z-index: -1;
 }
 
+
 .author img{
-width: 30%;
+height: 80px;
+margin: -50px 10px 0px 0px;
+float: right;
+z-index: 1;
+
 }
 
 
 .fa.fa-star{
 color: $gold;
 }
-
-//look into flexbox for rows 
-
-//standard size- pixels instead of percents? for images
-//move description right under or on top of image
-//remove text decoration from author name 

@@ -6,7 +6,7 @@ html {
 
 body {
   background: #39538D;
-  max-width: 100%;
+  max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
   body::after {
@@ -18,27 +18,47 @@ h1 {
   text-align: center;
   font-family: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif; }
 
-.story-block {
-  background: #503C91;
-  text-align: center;
-  margin: 10px;
-  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
-  font-size: 20px;
-  width: 350px;
-  height: 500px; }
-
 .title {
-  padding-top: 50px; }
+  font-size: 20px;
+  font-weight: bold;
+  word-wrap: break-word;
+  text-align: center; }
+
+.story-block {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  background: #503C91;
+  margin: 10px 5px;
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
+  height: 475px;
+  font-size: 15px; }
+  .story-block:last-child {
+    margin-right: 0; }
+
+.date {
+  text-align: center; }
 
 .story-description {
   font-style: italic;
-  background: #2B7E7E; }
+  font-size: 20px;
+  background: #2B7E7E;
+  height: 100px;
+  margin: -2.5px;
+  width: 295px; }
 
 .article img {
-  width: 85%; }
+  width: 295px;
+  height: 195px;
+  margin: auto 25px 0px 25px;
+  z-index: -1; }
 
 .author img {
-  width: 30%; }
+  height: 80px;
+  margin: -50px 10px 0px 0px;
+  float: right;
+  z-index: 1; }
 
 .fa.fa-star {
   color: #B59926; }

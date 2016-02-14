@@ -10,6 +10,7 @@ Project Retired by FCC 02/12/16 while working on project. API may be depreciated
  Praticed api calls in angular 
  Praticed using Sass
  Font Awesome
+ Praticed using Bourbon & Neat for Sass 
 ```
 #User Stories
 ```

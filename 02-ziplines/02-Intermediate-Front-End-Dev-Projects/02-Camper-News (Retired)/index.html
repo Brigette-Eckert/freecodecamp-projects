@@ -13,21 +13,17 @@
 
 	<div ng-controller="mainCtrl">
 		<div class="story-block" ng-repeat="story in stories">
-			<div class="article">
-				<h3 class="title"> {{story.headline}} </h3>
-				<a ng-href="{{story.link}}"> <img ng-src="{{story.image}}"></a>
-				<p class="story-description"> {{story.storyLink}}</p>
-				<p> Posted On: {{story.timePosted | date:''}} </p>
-				<p> <i class="fa fa-star"></i> {{story.rank}} </p>
+				<div class="article">
+					<p class="title"> {{story.headline}} </p>
+					<p class="date"> Posted On: {{story.timePosted | date:''}} </p>
+					<a ng-href="{{story.link}}"> <img ng-src="{{story.image}}"></a>
+					<p class="story-description"> {{story.storyLink}} </br> <i class="fa fa-star"></i> {{story.rank}} </p>		
+				</div>
+				<div class="author">
+				    <a ng-href="http://www.freecodecamp.com/{{story.author.username}}" title="{{story.author.username}}" >
+					<img ng-src="{{story.author.picture}}"> </a> 
+				</div>
 			</div>
-			<div class="author">
-				<p> written by: <a ng-href="http://www.freecodecamp.com/{{story.author.username}}" >
-				<img ng-src="{{story.author.picture}}">
-				 {{story.author.username}} </a> </p>
-			</div>
-
-		</div>
-
 	</div>
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
