@@ -2,6 +2,7 @@
 #What I learned from this project:
  ```
  Using the media wiki api
+ Using the wikipedia special random page feature 
 ```
 #User Stories
 ```
