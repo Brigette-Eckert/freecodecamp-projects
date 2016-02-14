@@ -1,4 +1,3 @@
-//need controller 
 angular.module('camperNewsApp', [])
 
 .controller('mainCtrl', ['$scope', '$http', function($scope, $http){
