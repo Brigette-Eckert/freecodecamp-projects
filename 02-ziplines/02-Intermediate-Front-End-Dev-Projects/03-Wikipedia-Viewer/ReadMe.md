@@ -15,7 +15,5 @@
 
 #Future Features/To Do: 
   ```
-  press enter to search as well
-
 
   ```
