@@ -1,6 +1,7 @@
 $("#search").click(function(){
   var value = $("#searchbox").val();
   var searchValue = encodeURI(value);
+  $("#results").html("");
    var url = "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch="+searchValue+"&format=json&callback=?"
   $.getJSON(url, function(data){
   console.log(data);
