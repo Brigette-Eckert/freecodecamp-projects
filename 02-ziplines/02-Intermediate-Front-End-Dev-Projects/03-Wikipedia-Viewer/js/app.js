@@ -1,12 +1,20 @@
-$("form").submit(function(){
+$("#search").click(function(){
   var value = $("#searchbox").val();
   var searchValue = encodeURI(value);
-  console.log(searchValue)
-   var url = "https://en.wikipedia.org/w/api.php?action=query&titles="+searchValue+
-"&prop=info&format=jsonfm"
+   var url = "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch="+searchValue+"&format=json&callback=?"
   $.getJSON(url, function(data){
-  console.log(data)
+  // console.log(data);
+  	for(i = 0; i < 10 ; i++) {
+  		console.log(data.query.search[i]);
+  		 $("#results").append("<p> <a href='//en.wikipedia.org/wiki/"+value+"'> <h4>" + data.query.search[i].title + "</h4>" + data.query.search[i].snippet + "</a> </p>")
+  		 }
+
   })
+  
 })
+
+// article link https://en.wikipedia.org/wiki val use _ for spaces
+
+
 
 

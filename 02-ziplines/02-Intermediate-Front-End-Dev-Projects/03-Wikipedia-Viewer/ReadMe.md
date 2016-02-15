@@ -4,7 +4,7 @@
  Using the media wiki api
  Using the wikipedia special random page feature 
  praticed using jquery 
- praticued using html forms
+ praticed using html forms/text boxes
 ```
 #User Stories
 ```
@@ -14,6 +14,6 @@
 
 #Future Features/To Do: 
   ```
-
+  press enter to search as well
 
   ```

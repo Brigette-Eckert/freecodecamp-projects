@@ -9,14 +9,18 @@
 </head>
 <body>
 
+
+ <input id="searchbox" type="text" search="article" value="Find an Article">
+
 <div id="buttons">
-  <a href="https://en.wikipedia.org/wiki/Special:Random"> <button> <i class="fa fa-random"></i> Random Article </button> </a>
-  
-  <form>
-    <input id="searchbox" type="text" search="article" value="Find an Article">
-  <button> <i class="fa fa-wikipedia-w"></i> Search </button>
-  </form>
+ <button id="search"> <i class="fa fa-wikipedia-w"></i> Search </button>
+
+<a href="https://en.wikipedia.org/wiki/Special:Random"> <button id="random"> <i class="fa fa-random"></i> Random Article </button> </a>
 </div>
+
+<div id="results">
+</div>
+
 
   <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="js/app.js" type="text/javascript" charset="utf-8"></script>

@@ -1,10 +1,29 @@
-body {
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+
+html {
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d6/Timeless_Books.jpg);
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-position: center; }
 
-button {
+#buttons {
   text-decoration: none;
-  border-radius: 10%; }
+  margin: 0 50%;
+  margin-top: 10px;
+  width: 100%; }
+
+#searchbox {
+  margin: 0 50%;
+  margin-top: 20%; }
+
+#random {
+  color: black; }
+
+#results p {
+  background: black;
+  color: white; }
 
 /*# sourceMappingURL=main.css.map */
