@@ -1,7 +1,7 @@
 html, body {
-  height: 100%;
   width: 100%;
-  overflow: hidden; }
+  height: 100%;
+  overflow-x: hidden; }
 
 html {
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d6/Timeless_Books.jpg);
@@ -17,13 +17,24 @@ html {
 
 #searchbox {
   margin: 0 50%;
-  margin-top: 20%; }
+  margin-top: 10%; }
 
 #random {
   color: black; }
 
-#results p {
-  background: black;
-  color: white; }
+#results div, #results h4, #results a {
+  text-decoration: none;
+  background-image: url(../img/card.png);
+  color: black; }
+
+#results {
+  width: 50%;
+  text-align: center;
+  margin: auto 30%; }
+
+#results div {
+  font-style: italic;
+  margin-bottom: 15px;
+  min-height: 150px; }
 
 /*# sourceMappingURL=main.css.map */

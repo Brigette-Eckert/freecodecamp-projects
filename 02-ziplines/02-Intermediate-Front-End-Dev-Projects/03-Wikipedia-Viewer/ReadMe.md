@@ -5,6 +5,7 @@
  Using the wikipedia special random page feature 
  praticed using jquery 
  praticed using html forms/text boxes
+ learned about css overflow property
 ```
 #User Stories
 ```
