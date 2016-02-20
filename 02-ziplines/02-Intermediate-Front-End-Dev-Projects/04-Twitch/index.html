@@ -19,13 +19,11 @@
 	
 	<div class="main" ng-controller="mainCtrl">
 		<div class="user" ng-repeat="data in userData">
-			<p> TWITCH INFO {{data.stream.channel.display_name}} {{data.stream.game}} 
+			<p><a ng-href="http://www.twitch.tv/{{data.username}}/profile"> {{data.channel.display_name}}</a> {{data.stream.game}} 
 				<img ng-src= {{data.stream.channel.logo}}
 				
 			</p>
 
-
-		</ class="offline"div>
 	</div>
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
