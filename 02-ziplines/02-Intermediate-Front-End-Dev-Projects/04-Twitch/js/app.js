@@ -1,17 +1,23 @@
 angular.module('twitchStatusApp', [])
 	
 .controller('mainCtrl', ['$scope', '$http', function($scope, $http){
-	$scope.user = "";
+	$scope.user = ""
 	$scope.twitchUsers = ["freecodecamp", "EtchTheSketch", "SoXvicious", "Dexteritybonus", "patrickrothfuss", "FeliciaDay", "ShaBooZey", "Monstercat", "TotalBiscuit", "Crendor"];
+	$scope.userData =[];
 	for(i=0; i < $scope.twitchUsers.length; i++){
 		$scope.user = $scope.twitchUsers[i];
-		console.log("user " + $scope.user);
+		// console.log("user " + $scope.user);
 		$http.get("https://api.twitch.tv/kraken/streams/" + $scope.user).success(function(data){
 		console.log(data)
+		$scope.userData.push(data);
+		console.log($scope.userData);
 		})
 	};
 	
 }])
 
+
+
+//add another array of each object and then use ng -repeat to display on html
 
 
