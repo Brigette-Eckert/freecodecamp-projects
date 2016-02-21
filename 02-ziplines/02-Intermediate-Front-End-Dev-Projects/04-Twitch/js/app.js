@@ -4,30 +4,33 @@ angular.module('twitchStatusApp', [])
 	$scope.user = ""
 	$scope.twitchUsers = ["freecodecamp", "EtchTheSketch", "SoXvicious", "Dexteritybonus", "patrickrothfuss", "FeliciaDay", "ShaBooZey", "Monstercat", "TotalBiscuit", "Crendor"];
 	$scope.userData =[];
+
 	for(i=0; i < $scope.twitchUsers.length; i++){
 		$scope.user = $scope.twitchUsers[i];
-		// console.log("user " + $scope.user);
-		$http.get("https://api.twitch.tv/kraken/streams/" + $scope.user).success(function(data){
-			// console.log("og data " + data);
-			console.log("streaming status " + data.stream)
-			if(data.stream == "null"){
-			$http.get(data._links.self).success(function(info){
-				console.log("offline");
-				// $scope.userData.push(info);
+		$http.get("https://api.twitch.tv/kraken/streams/" + $scope.user).success(function(data) {
+			if(data.stream == null){
+				// console.log("offline")
+				$http.get(data._links.channel).success(function(info){
+					// console.log(info);
+					$scope.name = info.display_name;
+					$scope.avatar = info.logo;
+					$scope.game = "";
+					$scope.userInfo = {name: $scope.name , game: $scope.game, avatar: $scope.avatar}
+					$scope.userData.push($scope.userInfo);		
+				    console.log($scope.userData);	
 				})
-			} else if(data.stream != "null") {
+			} else {
 				$scope.channel = data.stream.channel;
 				$scope.name = $scope.channel.display_name;
 				$scope.game = $scope.channel.game;
 				$scope.avatar = $scope.channel.logo;
 				$scope.userInfo = {name: $scope.name , game: $scope.game, avatar: $scope.avatar}
-			    $scope.userData.push($scope.userInfo);			
+			    $scope.userData.push($scope.userInfo);		
+			    console.log($scope.userData);	
 			}
-			console.log($scope.userData);
 		})
-		
+
 	};
-	
 }])
 
 

@@ -13,4 +13,11 @@
 a {
   text-decoration: none; }
 
+.main p {
+  display: inline; }
+
+.avatar-display img {
+  border-radius: 100%;
+  height: 100px; }
+
 /*# sourceMappingURL=main.css.map */

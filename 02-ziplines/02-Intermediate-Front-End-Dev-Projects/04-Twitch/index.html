@@ -19,11 +19,7 @@
 	
 	<div class="main" ng-controller="mainCtrl">
 		<div class="user" ng-repeat="user in userData">
-			<p><a ng-href="http://www.twitch.tv/{{user.name}}/profile"> Name {{user.name}}</a> Game {{user.game}} 
-				<img ng-src= {{user.avatar}}> Avatar
-				
-			</p>
-
+			 <p class="avatar-display"> <img ng-src= {{user.avatar}}> </p> <p class="name-display"> <a ng-href="http://www.twitch.tv/{{user.name}}">{{user.name}}</a></p> <p class="game-display">{{user.game}} </p>
 	</div>
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
