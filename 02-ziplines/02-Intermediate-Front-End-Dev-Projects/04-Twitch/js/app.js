@@ -20,7 +20,7 @@ angular.module('twitchStatusApp', [])
 				$scope.name = $scope.channel.display_name;
 				$scope.game = $scope.channel.game;
 				$scope.avatar = $scope.channel.logo;
-				$scope.userInfo = {name:'"' + scope.name + '"', game: '"' + scope.game + '"', avatar: '"' + scope.avatar + '"'}
+				$scope.userInfo = {name: $scope.name , game: $scope.game, avatar: $scope.avatar}
 			    $scope.userData.push($scope.userInfo);			
 			}
 			console.log($scope.userData);
