@@ -18,9 +18,9 @@
 	</div>
 	
 	<div class="main" ng-controller="mainCtrl">
-		<div class="user" ng-repeat="data in userData">
-			<p><a ng-href="http://www.twitch.tv/{{data.username}}/profile"> {{data.channel.display_name}}</a> {{data.stream.game}} 
-				<img ng-src= {{data.stream.channel.logo}}
+		<div class="user" ng-repeat="user in userData">
+			<p><a ng-href="http://www.twitch.tv/{{user.name}}/profile"> Name {{user.name}}</a> Game {{user.game}} 
+				<img ng-src= {{user.avatar}}> Avatar
 				
 			</p>
 
