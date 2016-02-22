@@ -1,7 +1,9 @@
 
 #What I learned from this project:
  ```
-
+ Using Twitch API
+ praticed using Sass
+ praticed using Angular
 ```
 #User Stories
 ```
@@ -16,5 +18,5 @@
 #Future Features/To Do: 
   ```
 
-
+	
   ```

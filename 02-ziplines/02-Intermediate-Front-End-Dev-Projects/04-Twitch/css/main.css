@@ -6,12 +6,12 @@ body {
 #heading {
   width: 70%;
   margin: auto;
-  background: #361356;
   color: white; }
 
 #heading {
   font-family: 'Bangers', cursive;
-  margin-top: 25px; }
+  margin-top: 25px;
+  background: #361356; }
 
 #heading h1 {
   margin: auto 35%;
@@ -31,11 +31,20 @@ a {
 
 .main {
   margin-top: 25px;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  font-family: 'Orbitron', sans-serif;
+  background: #361356; }
 
-.main p {
-  display: inline;
-  font-family: 'Orbitron', sans-serif; }
+.avatar-display, .name-display, .game-display {
+  display: inline-block;
+  width: 33.3%; }
+
+.name-display {
+  margin: auto 50px;
+  margin-bottom: 50px; }
+
+.name-display {
+  margin: auto -50px; }
 
 .avatar-display img {
   border-radius: 100%;

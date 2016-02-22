@@ -13,7 +13,7 @@ angular.module('twitchStatusApp', [])
 					// console.log(info);
 					$scope.name = info.display_name;
 					$scope.avatar = info.logo;
-					$scope.game = "";
+					$scope.game = "Offline";
 					$scope.userInfo = {name: $scope.name , game: $scope.game, avatar: $scope.avatar}
 					$scope.userData.push($scope.userInfo);		
 				    console.log($scope.userData);	
@@ -46,6 +46,3 @@ angular.module('twitchStatusApp', [])
 
 
 //use ng-show to show/hide based on online status
-//class offline or online for sass to make color as same as fliter 
-
-//sort userData 
