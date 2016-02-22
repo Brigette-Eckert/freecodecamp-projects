@@ -1,21 +1,23 @@
+$purple: #361356;
+
+body {
+	background: black;
+}
 .main, 
 #heading {
 	width: 70%;
 	margin: auto;
-}
-
-
-#heading{
-	background: grey;
+	background:  $purple;
 	color: white;
 }
 
 .user {
-	border: 2px solid black;
+	border: 2px solid white;
 }
 
-a {
+a{
 	text-decoration: none;
+	color: white;
 }
 
 .main p{
