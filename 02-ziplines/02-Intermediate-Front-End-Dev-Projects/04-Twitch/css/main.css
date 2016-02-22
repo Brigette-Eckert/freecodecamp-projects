@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Bangers|Orbitron:500);
 body {
   background: black; }
 
@@ -8,6 +9,19 @@ body {
   background: #361356;
   color: white; }
 
+#heading {
+  font-family: 'Bangers', cursive;
+  margin-top: 25px; }
+
+#heading h1 {
+  margin: auto 35%;
+  padding-top: 40px;
+  font-size: 40px; }
+
+ul {
+  margin: auto 90%;
+  padding: 5px; }
+
 .user {
   border: 2px solid white; }
 
@@ -15,8 +29,13 @@ a {
   text-decoration: none;
   color: white; }
 
+.main {
+  margin-top: 25px;
+  margin-bottom: 25px; }
+
 .main p {
-  display: inline; }
+  display: inline;
+  font-family: 'Orbitron', sans-serif; }
 
 .avatar-display img {
   border-radius: 100%;

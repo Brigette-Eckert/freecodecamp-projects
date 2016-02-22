@@ -1,15 +1,38 @@
-$purple: #361356;
+@import url(https://fonts.googleapis.com/css?family=Bangers|Orbitron:500);
+
+$darkpurple: #361356;
+$lightpurple: lighten($darkpurple, 50%);
 
 body {
 	background: black;
 }
+
 .main, 
 #heading {
 	width: 70%;
 	margin: auto;
-	background:  $purple;
+	background:  $darkpurple;
 	color: white;
 }
+
+//top banner
+#heading {
+   font-family: 'Bangers', cursive;
+   margin-top: 25px;
+}
+
+#heading h1{
+   margin: auto 35%;
+   padding-top: 40px;
+   font-size: 40px;
+}
+
+ul {
+	margin: auto 90%;
+	padding: 5px;
+}
+
+//Streamer Info
 
 .user {
 	border: 2px solid white;
@@ -19,9 +42,14 @@ a{
 	text-decoration: none;
 	color: white;
 }
+.main {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
 
 .main p{
 	display: inline;
+	font-family: 'Orbitron', sans-serif;
 }
 
 .avatar-display img {

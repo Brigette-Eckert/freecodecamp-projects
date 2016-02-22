@@ -31,7 +31,7 @@ angular.module('twitchStatusApp', [])
 			console.log(error)
 			$scope.name = error.message.split("'")[1];
 			console.log("name " + $scope.name)
-			$scope.avatar = "img/twitch.png";
+			$scope.avatar = "img/notwitch.png";
 			$scope.game = "No Account";
 			$scope.userInfo = {name: $scope.name , game: $scope.game, avatar: $scope.avatar}
 			$scope.userData.push($scope.userInfo);	
