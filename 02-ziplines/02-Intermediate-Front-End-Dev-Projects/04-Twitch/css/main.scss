@@ -2,6 +2,7 @@
 
 $darkpurple: #361356;
 $lightpurple: lighten($darkpurple, 30%);
+$purple-grey: #352940;
 
 body {
   background: black;
@@ -77,10 +78,9 @@ a {
 }
 
 .userOffline {
-    background: $lightpurple;
-    border: 2px solid darken($lightpurple, 10%);
+    background: $purple-grey;
+    border: 2px solid darken($purple-grey, 10%);
   }
 
 
 
-//add condtion for background color based on online status if $scope.game == Offline or  No Account use light purple
