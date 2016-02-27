@@ -1,8 +1,10 @@
 angular.module('twitchStatusApp', [])
-	
+
+
 .controller('mainCtrl', ['$scope', '$http', function($scope, $http){
 	$scope.twitchUsers = ["freecodecamp", "EtchTheSketch", "SoXvicious", "Dexteritybonus", "patrickrothfuss", "FeliciaDay", "ShaBooZey", "Monstercat", "TotalBiscuit", "Crendor", "comster404", "brunofin"];
 	$scope.userData =[];
+	$scope.userView =[];
 
 	for(i=0; i < $scope.twitchUsers.length; i++){
 		$scope.user = $scope.twitchUsers[i];
@@ -14,18 +16,20 @@ angular.module('twitchStatusApp', [])
 					$scope.name = info.display_name;
 					$scope.avatar = info.logo;
 					$scope.game = "Offline";
-					$scope.userInfo = {name: $scope.name , game: $scope.game, avatar: $scope.avatar}
+					$scope.status = "Offline";
+					$scope.userInfo = {name: $scope.name , game: $scope.game, avatar: $scope.avatar, status: $scope.status}
 					$scope.userData.push($scope.userInfo);		
-				    console.log($scope.userData);	
+				    console.log($scope.userData);
 				})
 			} else {
 				$scope.channel = data.stream.channel;
 				$scope.name = $scope.channel.display_name;
 				$scope.game = $scope.channel.game;
 				$scope.avatar = $scope.channel.logo;
-				$scope.userInfo = {name: $scope.name , game: $scope.game, avatar: $scope.avatar}
-			    $scope.userData.push($scope.userInfo);		
-			    console.log($scope.userData);	
+				$scope.status = "Online";
+				$scope.userInfo = {name: $scope.name , game: $scope.game, avatar: $scope.avatar, status: $scope.status}
+			    $scope.userData.push($scope.userInfo);	
+			    console.log($scope.userData);
 			}
 		}).error(function(error){
 			console.log(error)
@@ -33,7 +37,8 @@ angular.module('twitchStatusApp', [])
 			console.log("name " + $scope.name)
 			$scope.avatar = "img/notwitch.png";
 			$scope.game = "No Account";
-			$scope.userInfo = {name: $scope.name , game: $scope.game, avatar: $scope.avatar}
+			$scope.status = "Offline";
+			$scope.userInfo = {name: $scope.name , game: $scope.game, avatar: $scope.avatar, status: $scope.status}
 			$scope.userData.push($scope.userInfo);	
 			console.log($scope.userData);	
 		})
@@ -44,5 +49,8 @@ angular.module('twitchStatusApp', [])
 
 
 
-
-//use ng-show to show/hide based on online status
+//add array for online and offline - ng view based on array 
+//
+//change css class based on online/offfline status - not toggling correclty
+//sort by online or offline 
+//fliter array 
