@@ -4,13 +4,6 @@ angular.module('twitchStatusApp', [])
 .controller('mainCtrl', ['$scope', '$http', function($scope, $http){
 	$scope.twitchUsers = ["freecodecamp", "EtchTheSketch", "SoXvicious", "Dexteritybonus", "patrickrothfuss", "FeliciaDay", "ShaBooZey", "Monstercat", "TotalBiscuit", "Crendor", "comster404", "brunofin"];
 	$scope.userData =[];
-	$scope.userView =[];
-
-	//set up function that fliters array that goes into ng-view 
-	//write displayAll()
-	//write displayOnline()
-	//write displayOffline()
-
 
 	for(i=0; i < $scope.twitchUsers.length; i++){
 		$scope.user = $scope.twitchUsers[i];
@@ -25,7 +18,7 @@ angular.module('twitchStatusApp', [])
 					var status = "Offline";
 					var userInfo = {name: name , game: game, avatar: avatar, status: status}
 					$scope.userData.push(userInfo);		
-				    console.log($scope.userData);
+				    // console.log($scope.userData);
 				})
 			} else {
 				var channel = data.stream.channel;
@@ -35,7 +28,7 @@ angular.module('twitchStatusApp', [])
 				var status = "Online";
 				var userInfo = {name: name , game: game, avatar: avatar, status: status}
 			    $scope.userData.push(userInfo);	
-			    console.log($scope.userData);
+			    // console.log($scope.userData);
 			}
 		}).error(function(error){
 			console.log(error)
@@ -46,7 +39,7 @@ angular.module('twitchStatusApp', [])
 			var status = "Offline";
 			var userInfo = {name: name , game: game, avatar: avatar, status: status}
 			$scope.userData.push(userInfo);	
-			console.log($scope.userData);	
+			// console.log($scope.userData);	
 		})
 
 	};
@@ -54,8 +47,3 @@ angular.module('twitchStatusApp', [])
 
 
 
-
-//
-//change css class based on online/offfline status - not toggling correclty
-//fliter array 
-//reivew ng  - click to possibly show/hide or change arrray of ng-view 

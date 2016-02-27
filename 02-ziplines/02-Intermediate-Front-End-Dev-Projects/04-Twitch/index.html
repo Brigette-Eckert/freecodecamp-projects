@@ -7,18 +7,18 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 </head>
-<body ng-app="twitchStatusApp">
+<body ng-app="twitchStatusApp" ng-controller="mainCtrl">
 	<div id="heading">
 		<h1> TWITCH STREAMERS </h1>
 		<ul> 
-			<li class="all" ng-click="displayAll()"> All</li>
-			<li class="online"  ng-click="displayOnline()"> Online </li>
-			<li class="offline"  ng-click="displayOffline()">Offline</li>
+			<li class="all" ng-click="filterData= ''"> All</li>
+			<li class="online"  ng-click="filterData = 'Online'"> Online </li>
+			<li class="offline"  ng-click="filterData = 'Offline'">Offline</li>
 		</ul>
 	</div>
 	
-	<div class="main" ng-controller="mainCtrl">
-		<div class="user" ng-class="{userOffline: user.status == 'Offline'}" ng-repeat="user in userData | orderBy: '-status'">
+	<div class="main">
+		<div class="user" ng-class="{userOffline: user.status == 'Offline'}" ng-repeat="user in userData | orderBy: '-status' | filter: filterData">
 			 <div class="avatar-display"> <img ng-src= {{user.avatar}}> </div> <div class="name-display"> <a ng-href="http://www.twitch.tv/{{user.name}}">{{user.name}} </div> <div class="game-display"> {{user.game}} </a> </div>
 	</div>
 
