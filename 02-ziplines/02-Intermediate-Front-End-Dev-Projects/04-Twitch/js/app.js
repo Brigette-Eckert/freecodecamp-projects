@@ -6,6 +6,8 @@ angular.module('twitchStatusApp', [])
 	$scope.userData =[];
 	$scope.userView =[];
 
+	//set up function that fliters array that goes into ng-view 
+
 	for(i=0; i < $scope.twitchUsers.length; i++){
 		$scope.user = $scope.twitchUsers[i];
 		$http.get("https://api.twitch.tv/kraken/streams/" + $scope.user).success(function(data){
@@ -49,8 +51,7 @@ angular.module('twitchStatusApp', [])
 
 
 
-//add array for online and offline - ng view based on array 
 //
 //change css class based on online/offfline status - not toggling correclty
-//sort by online or offline 
 //fliter array 
+//reivew ng  - click to possibly show/hide or change arrray of ng-view 

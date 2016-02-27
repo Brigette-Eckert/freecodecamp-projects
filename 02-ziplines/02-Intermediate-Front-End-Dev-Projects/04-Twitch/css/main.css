@@ -59,4 +59,8 @@ a {
     bottom: 40px;
     right: 4px; }
 
+.userOffline {
+  background: #8531d1;
+  border: 2px solid #6a25aa; }
+
 /*# sourceMappingURL=main.css.map */

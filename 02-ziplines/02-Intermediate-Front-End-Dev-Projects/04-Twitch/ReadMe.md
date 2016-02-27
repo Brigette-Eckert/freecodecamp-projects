@@ -13,6 +13,8 @@
 
 3.I will see a placeholder notification if a streamer has closed their Twitch account (or the account never existed). You can verify this works by adding brunofin and comster404 to your array of Twitch streamers.
 
+4.I can fliter by online status 
+
 ```
 
 #Future Features/To Do: 
