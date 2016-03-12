@@ -11,7 +11,21 @@
 // If either argument isn't a valid number, return undefined.
 
 function add() {
-  return false;
+
+	var arg1 = arguments[0];
+	var arg2 = arguments[1];
+
+	var sum;
+	if(typeof arg1 == "number" && typeof arg2 == "number"){
+		sum = (arg1 + arg2);
+	} else {
+		console.log("undefined");
+		return undefined;
+	}
+ 	console.log(sum);
+ 	return sum;
 }
 
 add(2,3);
+add(2)(3);
+// add(2)([3]);
