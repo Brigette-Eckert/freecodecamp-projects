@@ -10,6 +10,7 @@ function factorialize(num) {
     int = num--;
     sum *= int;
 	};
+	console.log(sum);
 	return sum;
 }
 

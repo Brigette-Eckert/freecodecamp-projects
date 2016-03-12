@@ -6,7 +6,7 @@ function reverseString(str) {
   orgStr = str.split("");
   rev = orgStr.reverse();
   revStr = rev.join('');
-
+  console.log(revStr);
  return revStr;
 }
 

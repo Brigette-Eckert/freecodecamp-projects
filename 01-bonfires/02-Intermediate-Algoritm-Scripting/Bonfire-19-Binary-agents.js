@@ -2,6 +2,12 @@
 // The binary string will be space separated.
 
 function binaryAgent(str) {
+	var biArr = str.split(" ");
+	for(i=0; i < biArr.length; i++){
+		console.log(biArr[i]);
+		console.log(String.fromCharCode(biArr[i]));
+
+	}
   return str;
 }
 
