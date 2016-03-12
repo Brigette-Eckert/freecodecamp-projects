@@ -3,7 +3,16 @@
 
 function every(collection, pre) {
   // Is everyone being true?
-  return pre;
+ 	var honest =true;
+ 	for(i=0; i < collection.length; i++){
+ 		if(collection[i][pre] === null || Boolean(collection[i][pre]) === false){
+ 			honest = false;
+ 			break;
+ 		}
+ 	}
+  console.log(honest);
+  return honest;
 }
 
-every([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex");
+
+every([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex")
