@@ -7,3 +7,9 @@ function convert(str) {
 }
 
 convert("Dolce & Gabbana");
+
+//& &amp 
+//< &gt
+//> &lt
+//" &quot
+//' &apos
