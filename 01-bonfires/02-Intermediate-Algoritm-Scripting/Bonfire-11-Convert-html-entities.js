@@ -3,21 +3,21 @@
 
 function convert(str) {
   // &colon;&rpar;
-  var htmlStr = str.replace(/[&><"']/g, callback());
-  var key = {
+  var htmlStr= str.replace(/[&><"']/g,function(x){
+  	 var key = {
   	"&": "&amp",
-  	"<": "&gt",
-  	">": "&lt",
+  	"<": "&lt",
+  	">": "&gt",
   	'"': '&quot',
   	"'": "&apos"
-  }
+  };
 
-  function callback(x){
-  	return key[x];
-  }
-
-   console.log(htmlStr)
+    	return key[x]+";";
+  });
+  console.log(htmlStr);
   return htmlStr;
 }
+ 
 
 convert("Dolce & Gabbana");
+convert("Hamburgers < Pizza < Tacos");
