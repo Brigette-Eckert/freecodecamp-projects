@@ -16,5 +16,6 @@
 
 #Future Features/To Do: 
   ```
-  Add CSS to dispaly time passing by
+  Fix reset bug (resets to work time regardless of work or break)
+  Remove borders on button
   ```
