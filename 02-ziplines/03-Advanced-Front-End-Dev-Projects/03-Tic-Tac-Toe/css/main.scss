@@ -1,0 +1,19 @@
+$boardsize: 500px;
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#gameboard{
+  @include centerer;
+  height: $boardsize;
+  width: $boardsize;
+  border: 2.5px dotted blue;
+  }
+.square{
+  border: 2px solid black;
+  height: $boardsize/3;
+  box-sizing: border-box;
+  }

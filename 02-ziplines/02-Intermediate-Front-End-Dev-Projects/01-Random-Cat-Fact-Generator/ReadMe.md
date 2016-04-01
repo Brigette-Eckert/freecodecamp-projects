@@ -15,7 +15,4 @@
 #Future Features/To Do: 
   ```
    Make tweet button extend to multiple tweets if fact, hashtags and tinyurl combined are over 140 characters. 
-   Center tweet button 
-   Add picutre of a cat
-   add fav icon
-  ```
+    ```
