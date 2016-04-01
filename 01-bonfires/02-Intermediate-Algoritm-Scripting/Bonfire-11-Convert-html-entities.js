@@ -3,13 +3,21 @@
 
 function convert(str) {
   // &colon;&rpar;
-  return str;
+  var htmlStr = str.replace(/[&><"']/g, callback());
+  var key = {
+  	"&": "&amp",
+  	"<": "&gt",
+  	">": "&lt",
+  	'"': '&quot',
+  	"'": "&apos"
+  }
+
+  function callback(x){
+  	return key[x];
+  }
+
+   console.log(htmlStr)
+  return htmlStr;
 }
 
 convert("Dolce & Gabbana");
-
-//& &amp 
-//< &gt
-//> &lt
-//" &quot
-//' &apos
