@@ -4,12 +4,19 @@
   left: 50%;
   transform: translate(-50%, -50%);
   height: 500px;
-  width: 500px;
-  border: 2.5px dotted blue; }
+  width: 500px; }
 
 .square {
-  border: 2px solid black;
   height: 166.66667px;
   box-sizing: border-box; }
+
+.left-square {
+  border-right: 2px solid black; }
+
+.right-square {
+  border-left: 2px solid black; }
+
+#row1, #row2 {
+  border-bottom: 2px solid black; }
 
 /*# sourceMappingURL=main.css.map */

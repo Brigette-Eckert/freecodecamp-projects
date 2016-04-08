@@ -10,10 +10,22 @@ $boardsize: 500px;
   @include centerer;
   height: $boardsize;
   width: $boardsize;
-  border: 2.5px dotted blue;
   }
+
 .square{
-  border: 2px solid black;
   height: $boardsize/3;
   box-sizing: border-box;
   }
+
+.left-square {
+  border-right: 2px solid black;
+}
+
+.right-square{
+  border-left: 2px solid black;
+}
+
+#row1, #row2 {
+  border-bottom: 2px solid black;
+}
+

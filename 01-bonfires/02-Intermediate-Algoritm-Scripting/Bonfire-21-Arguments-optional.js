@@ -11,30 +11,24 @@
 // If either argument isn't a valid number, return undefined.
 
 function add() {
-	var arg1 = arguments[0];
-	function checkArg(arg1){
-		if(typeof arg1 == "number"){
-			console.log(arg1);
-			return function sum(num){
-				console.log(arg1 + sum)
-				return arg1 + sum
-			}
 
-			//fuction that takes in other number and adds it to arg1 
-		} else {
-			console.log("undefined");
-			 return undefined;
-		}
-		sum(3)
-	}
-
+  var sum;	
+  
+  if(typeof arguments[0] !== "number" || typeof arguments[1] !== "number"){
+  	console.log("undefined");
+  	return undefined;
+  } else if (arguments.length == 2){
+  	sum = arguments[0] + arguments[1];
+  } else {
+  	return function(arg2){
+  		return arguments[0] + arg2;
+  	};
+  }
+  console.log(sum);
+  return sum;
 }
 
-//QUESTIONS: 
-	//not sure where or how to call sum() with closure- no error but not running
-	//not sure how to access 2nd num when not an arg- sum is suppose to take it in somehow
-
 add(2,3);
-add(2);
-// add(2)(3);
-// add(2)([3]);
+add(2,"3");
+add(2)(3);
+add(2)([3]);
