@@ -1,22 +1,33 @@
+body {
+  background-color: #265F72; }
+
 #gameboard {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 500px;
-  width: 500px; }
+  width: 500px;
+  color: #D9C661; }
 
 .square {
   height: 166.66667px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  text-align: center;
+  padding: 50px;
+  font-size: 40px;
+  font-weight: bold; }
 
 .left-square {
-  border-right: 2px solid black; }
+  border-right: 2px solid black;
+  border-color: #D9C661; }
 
 .right-square {
-  border-left: 2px solid black; }
+  border-left: 2px solid black;
+  border-color: #D9C661; }
 
 #row1, #row2 {
-  border-bottom: 2px solid black; }
+  border-bottom: 2px solid black;
+  border-color: #D9C661; }
 
 /*# sourceMappingURL=main.css.map */
