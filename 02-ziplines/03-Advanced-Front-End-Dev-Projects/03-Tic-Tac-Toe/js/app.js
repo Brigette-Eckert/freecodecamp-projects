@@ -4,14 +4,17 @@ var ai = "";
 var winner = "none";
 var turn = 1;
 
-player = "X"; 
-ai = "O";
+
 //set state of each square: intially empty 
-var gameboard = ["X", "X", "X", "", "", "", "", "", ""];
+var gameboard = ["", "", "", "", "", "", "", "", ""];
 ;
 //manipulate dom - to display intinal choose X or O, show gameboard during play, and then play again. 
 
-console.log(gameboard[0]);
+player = "X"; 
+ai = "O";
+
+
+
 
 
 for(i=0; i < 10; i++){
@@ -19,11 +22,25 @@ for(i=0; i < 10; i++){
 	//set up turns, player goes first
 	if(turn%2==0){
 		// console.log("computer's turn");
+		var aiPick= (Math.floor(Math.random() * 9));
+		var selector = "#sq" + aiPick;
+		console.log(aiPick);
+		if(gameboard[aiPick] == ""){
+			gameboard[aiPick] = ai;
+			console.log(gameboard);
+			$(selector).html(ai);
+		}; //find way to reroll if AI selets already taken spot
+//have computer pick num0-8 on turn if not occupied or keep track of avalbile squares with array and choose from that
+
+		
 	} else {
+		//take turn // on click assigns X or O to spot if empty
+
 		// console.log("players's turn")
 	}
 	checkForWinner();
 	turn ++; 
+    
 }
 
 // while(winner == "none"){
@@ -73,21 +90,19 @@ function checkForWinner(){
 	}else if(gameboard[4] === ai && gameboard[6] ===ai && gameboard[7] ===ai){
 		winner = "computer";
 	}
-	console.log(winner);
+
+	// console.log(winner);
 }
 
 
 
 function reset(){
-	gameboard=[{1: "empty"}, {2: "empty"}, {3: "empty"}, {4: "empty"}, {5: "empty"}, {6: 
-"empty"}, {7: "empty"}, {8: "empty"}, {9: "empty"}];
- console.log("game reset")
-}
+	var gameboard = ["", "", "", "", "", "", "", "", ""];
+ 	console.log("game reset")
+};
 
 
 
-//on click- fill in square clicked and then have computer fill in another square
 
-//have computer pick num1-9 on turn if not occupied or keep track of avalbile squares with array and choose from that
 
 //draw a line bewtween spaces when win condtion is met 
