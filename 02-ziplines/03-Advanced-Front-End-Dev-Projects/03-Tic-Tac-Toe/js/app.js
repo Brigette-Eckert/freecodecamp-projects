@@ -2,53 +2,32 @@
 var player = ""; 
 var ai = "";
 var winner = "none";
-var turn = 1;
+
+
+//find way to assign array to match sq so sq+num = gameboard[num]
 
 
 //set state of each square: intially empty 
 var gameboard = ["", "", "", "", "", "", "", "", ""];
-;
 //manipulate dom - to display intinal choose X or O, show gameboard during play, and then play again. 
 
 player = "X"; 
 ai = "O";
 
-
-
-
-
-for(i=0; i < 10; i++){
-	// console.log("turn " + turn);
-	//set up turns, player goes first
-	if(turn%2==0){
-		// console.log("computer's turn");
-		var aiPick= (Math.floor(Math.random() * 9));
-		var selector = "#sq" + aiPick;
-		console.log(aiPick);
-		if(gameboard[aiPick] == ""){
-			gameboard[aiPick] = ai;
-			console.log(gameboard);
-			$(selector).html(ai);
-		}; //find way to reroll if AI selets already taken spot
-//have computer pick num0-8 on turn if not occupied or keep track of avalbile squares with array and choose from that
-
-		
-	} else {
-		//take turn // on click assigns X or O to spot if empty
-
-		// console.log("players's turn")
-	}
-	checkForWinner();
-	turn ++; 
-    
-}
-
-// while(winner == "none"){
-
-// }
-
-
-
+function aiTurn(){
+	console.log("computer's turn");
+	//have computer pick num0-8 on turn if not occupied or keep track of available squares with array and choose from that
+	var available = gameboard.reduce(function(a, b, i) { if(b === "") a.concat(i) }, []);
+	var aiPick= (Math.floor(Math.random() * 9));
+	var selector = "#sq" + aiPick;
+	console.log(aiPick);
+	if(gameboard[aiPick] == ""){
+		gameboard[aiPick] = ai;
+		console.log(gameboard);
+		$(selector).html(ai);
+			//find way to reroll if AI selets already taken spot
+		}; 
+};
 
 
 function checkForWinner(){
@@ -91,8 +70,8 @@ function checkForWinner(){
 		winner = "computer";
 	}
 
-	// console.log(winner);
-}
+	console.log(winner);
+};
 
 
 
@@ -103,6 +82,18 @@ function reset(){
 
 
 
+//take turn // on click assigns X or O to spot if empty
+console.log("players's turn");
+$("#gameboard").click(function(){
+	console.log("click");
+	// checkForWinner();
+	// // aiTurn();
+	// checkForWinner();
+});
 
 
-//draw a line bewtween spaces when win condtion is met 
+
+
+    	
+
+//draw a line bewtween spaces when win condtion is met or sass animation - glow/flash etc 
