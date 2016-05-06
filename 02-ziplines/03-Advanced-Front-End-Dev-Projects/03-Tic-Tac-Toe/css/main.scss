@@ -9,14 +9,17 @@ $boardsize: 500px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-body{
+
+body {
   background-color: $background-color;
 }
+
 #gameboard{
   @include centerer;
   height: $boardsize;
   width: $boardsize;
   color: $board-color;
+  margin-left: 40px;
   }
 
 .square{
@@ -27,6 +30,13 @@ body{
   font-size:40px;
   font-weight: bold;
   }
+
+.symbol {
+  font-size:40px;
+  font-weight: bold;
+  padding: 8px;
+
+}
 
 .left-square {
   border-right: 2px solid black;
@@ -53,3 +63,26 @@ body{
                -2px 4px 4px $glow-color,
                -2px -4px 4px $glow-color,
 }
+
+.buttons {
+  width: 170px;
+  margin: 100px 0 0 40px;
+  text-align: center;
+  h1 {
+    color: $board-color;
+  }
+}
+.buttons span{
+  cursor: pointer;
+  display: inline-block;
+  color: $board-color;
+  border: 2px solid $board-color;
+  width: 150px;
+  height: 75px;
+  margin: 8px;
+  border-radius: 10%;
+  text-align: center;
+}
+
+
+

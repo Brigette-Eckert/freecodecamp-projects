@@ -8,7 +8,8 @@ body {
   transform: translate(-50%, -50%);
   height: 500px;
   width: 500px;
-  color: #D9C661; }
+  color: #D9C661;
+  margin-left: 40px; }
 
 .square {
   height: 166.66667px;
@@ -17,6 +18,11 @@ body {
   padding: 50px;
   font-size: 40px;
   font-weight: bold; }
+
+.symbol {
+  font-size: 40px;
+  font-weight: bold;
+  padding: 8px; }
 
 .left-square {
   border-right: 2px solid black;
@@ -32,5 +38,23 @@ body {
 
 .glow {
   text-shadow: 4px 2px 4px rgba(150, 132, 36, 0.5), 4px -2px 4px rgba(150, 132, 36, 0.5), -4px 2px 4px rgba(150, 132, 36, 0.5), -4px -2px 4px rgba(150, 132, 36, 0.5), 2px 4px 4px rgba(150, 132, 36, 0.5), 2px -4px 4px rgba(150, 132, 36, 0.5), -2px 4px 4px rgba(150, 132, 36, 0.5), -2px -4px 4px rgba(150, 132, 36, 0.5); }
+
+.buttons {
+  width: 170px;
+  margin: 100px 0 0 40px;
+  text-align: center; }
+  .buttons h1 {
+    color: #D9C661; }
+
+.buttons span {
+  cursor: pointer;
+  display: inline-block;
+  color: #D9C661;
+  border: 2px solid #D9C661;
+  width: 150px;
+  height: 75px;
+  margin: 8px;
+  border-radius: 10%;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */

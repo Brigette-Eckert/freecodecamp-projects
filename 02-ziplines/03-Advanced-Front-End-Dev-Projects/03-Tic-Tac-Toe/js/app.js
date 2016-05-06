@@ -23,6 +23,7 @@ function reset(){
 };
 
 function start() {
+	$('#symbol-' + player).addClass('glow');
 	gameboard = ["", "", "", "", "", "", "", "", ""];
 	playing = true;
 	winner = "none";
@@ -80,12 +81,11 @@ $("#gameboard").click(function(e){
 	//end game when winner delcared 
 	if(!playing) return;
 	console.log("players's turn");
-	//fix so player doesn't lose turn if invalid entry 
 	var playerPick = (e.target.id).slice(2);
 	console.log(playerPick);
 	var playerSelector = "#sq" + playerPick;
 	if(gameboard[playerPick] != ""){
-		alert("Invalid Selection");
+	   //player doesn't lose turn if invalid entry 
 		return;
 	};
 	if(gameboard[playerPick] == "") {

@@ -13,5 +13,5 @@
 
 #Future Features/To Do: 
   ```
-	Add CSS animation or strikethrough line for winner
+	Look into CSS animation for winners
   ```
