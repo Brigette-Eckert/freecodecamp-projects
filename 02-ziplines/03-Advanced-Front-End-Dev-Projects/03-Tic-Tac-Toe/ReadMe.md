@@ -1,6 +1,7 @@
 #What I learned from this project:
  ```
- 
+ praticed using event handlers in jQuery
+ praticed using SASS 
 
 ```
 #User Stories
@@ -12,5 +13,5 @@
 
 #Future Features/To Do: 
   ```
-
+	Add CSS animation or strikethrough line for winner
   ```

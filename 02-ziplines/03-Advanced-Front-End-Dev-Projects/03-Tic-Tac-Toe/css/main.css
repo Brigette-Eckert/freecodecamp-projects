@@ -30,4 +30,7 @@ body {
   border-bottom: 2px solid black;
   border-color: #D9C661; }
 
+.glow {
+  text-shadow: 4px 2px 4px rgba(150, 132, 36, 0.5), 4px -2px 4px rgba(150, 132, 36, 0.5), -4px 2px 4px rgba(150, 132, 36, 0.5), -4px -2px 4px rgba(150, 132, 36, 0.5), 2px 4px 4px rgba(150, 132, 36, 0.5), 2px -4px 4px rgba(150, 132, 36, 0.5), -2px 4px 4px rgba(150, 132, 36, 0.5), -2px -4px 4px rgba(150, 132, 36, 0.5); }
+
 /*# sourceMappingURL=main.css.map */

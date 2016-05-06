@@ -1,24 +1,33 @@
-var player = ""; 
-var ai = "";
-var winner = "none";
-var gameboard = ["", "", "", "", "", "", "", "", ""];
-var playing = true;
-
-
-
-
+var player = "O"; 
+var ai = "X";
+var winner, gameboard, playing;
 // have player choose x or o- make AI chose other
 
 //find way to assign array to match sq so sq+num = gameboard[num]
 //manipulate dom - to display intinal choose X or O, show gameboard during play, and then play again. 
 
-player = "X"; 
-ai = "O";
 //players = {
 //	"X": "Player",
 //  "O": "Computer"
 //}
 // e.g. players["X"] => "Player"
+
+
+function reset(){
+	setTimeout(function() {
+		start();
+		$('.square').removeClass("glow");
+	 	console.log("game reset");
+	 	$('.square').html("");
+	}, 3000);
+};
+
+function start() {
+	gameboard = ["", "", "", "", "", "", "", "", ""];
+	playing = true;
+	winner = "none";
+
+}
 
 function aiTurn(){
 	console.log("computer's turn");
@@ -55,41 +64,46 @@ function checkForWinner(board){
 		// If all three are equal and not blank
 		if(board[cond[0]] !== ""  && board[cond[0]] === board[cond[1]] && board[cond[1]] === board[cond[2]]) {
 			winner = board[cond[0]];
+			playing = false;
+			$('#sq'+ cond[0]).addClass('glow');
+			$('#sq'+ cond[1]).addClass('glow');
+			$('#sq'+ cond[2]).addClass('glow');
 			console.log(winner + " Wins!");
+			reset();
 			break;
 		}
 	}
 };
 
 
-function reset(){
-	gameboard = ["", "", "", "", "", "", "", "", ""];
- 	console.log("game reset")
-};
-
-
-
-
-
 $("#gameboard").click(function(e){
-	// console.log("players's turn");
+	//end game when winner delcared 
+	if(!playing) return;
+	console.log("players's turn");
+	//fix so player doesn't lose turn if invalid entry 
 	var playerPick = (e.target.id).slice(2);
 	console.log(playerPick);
 	var playerSelector = "#sq" + playerPick;
+	if(gameboard[playerPick] != ""){
+		alert("Invalid Selection");
+		return;
+	};
 	if(gameboard[playerPick] == "") {
 		gameboard[playerPick] = player;
 		console.log(gameboard);
 		$(playerSelector).html(player);
 	}; 
 
-
-	// have player take turn
 	checkForWinner(gameboard); 
-	aiTurn(); 
-	checkForWinner(gameboard);
+	if(playing){
+		aiTurn(); 
+		checkForWinner(gameboard);
+	}
 });
 
 
+
+start();
     	
 
 //draw a line bewtween spaces when win condtion is met or sass animation - glow/flash etc 

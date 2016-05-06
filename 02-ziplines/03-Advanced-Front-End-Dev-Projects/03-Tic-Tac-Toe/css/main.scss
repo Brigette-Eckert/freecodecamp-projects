@@ -1,5 +1,6 @@
 $background-color: #265F72; 
 $board-color: #D9C661;
+$glow-color: transparentize(darken($board-color, 25%), .5);
 $boardsize: 500px;
 
 @mixin centerer {
@@ -42,3 +43,13 @@ body{
   border-color: $board-color;
 }
 
+.glow {
+  text-shadow: 4px 2px 4px $glow-color,
+               4px -2px 4px $glow-color,
+               -4px 2px 4px $glow-color,
+               -4px -2px 4px $glow-color,
+               2px 4px 4px $glow-color,
+               2px -4px 4px $glow-color,
+               -2px 4px 4px $glow-color,
+               -2px -4px 4px $glow-color,
+}
