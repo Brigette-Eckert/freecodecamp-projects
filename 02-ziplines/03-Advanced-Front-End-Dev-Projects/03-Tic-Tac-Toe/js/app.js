@@ -1,14 +1,15 @@
-// have player choose x or o- make AI chose other
 var player = ""; 
 var ai = "";
 var winner = "none";
+var gameboard = ["", "", "", "", "", "", "", "", ""];
+var playing = true;
 
+
+
+
+// have player choose x or o- make AI chose other
 
 //find way to assign array to match sq so sq+num = gameboard[num]
-
-
-//set state of each square: intially empty 
-var gameboard = ["", "", "", "", "", "", "", "", ""];
 //manipulate dom - to display intinal choose X or O, show gameboard during play, and then play again. 
 
 player = "X"; 
@@ -17,14 +18,13 @@ ai = "O";
 function aiTurn(){
 	console.log("computer's turn");
 	//have computer pick num0-8 on turn if not occupied or keep track of available squares with array and choose from that
-	var available = gameboard.reduce(function(a, b, i) { if(b === "") a.concat(i) }, []);
 	var aiPick= (Math.floor(Math.random() * 9));
-	var selector = "#sq" + aiPick;
-	console.log(aiPick);
+	var aiSelector = "#sq" + aiPick;
+	// console.log(aiPick);
 	if(gameboard[aiPick] == ""){
 		gameboard[aiPick] = ai;
 		console.log(gameboard);
-		$(selector).html(ai);
+		$(aiSelector).html(ai);
 			//find way to reroll if AI selets already taken spot
 		}; 
 };
@@ -70,9 +70,17 @@ function checkForWinner(){
 		winner = "computer";
 	}
 
-	console.log(winner);
+	if(winner == "player"){
+		playing = false;
+		console.log("Congrats you win");
+		return winner;
+	} else if(winner == "computer"){
+		playing = false;
+		console.log("Computer wins");
+		return winner;
+	}
+	
 };
-
 
 
 function reset(){
@@ -82,16 +90,20 @@ function reset(){
 
 
 
-//take turn // on click assigns X or O to spot if empty
-console.log("players's turn");
-$("#gameboard").click(function(){
-	console.log("click");
-	// checkForWinner();
-	// // aiTurn();
-	// checkForWinner();
-});
 
 
+$("#gameboard").click(function(e){
+	var playerPick = (e.target.id);
+	var playerSelector = "#"+playerPick;
+	console.log(playerPick);
+	$(playerSelector).html(player);
+	// console.log("players's turn");
+	//have player take turn
+	// console.log("click");
+	checkForWinner(); 
+	aiTurn(); 
+	checkForWinner();
+	});
 
 
     	
