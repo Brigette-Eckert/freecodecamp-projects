@@ -19,8 +19,8 @@ $sliver: #A9A9A9;
 	@include centerer;
 	background-color: black;
 	border-radius: 100%;
-	height: 35em;
-	width: 35em;
+	height: 36em;
+	width: 36em;
 	z-index: 0;
 }
 
@@ -31,6 +31,7 @@ $sliver: #A9A9A9;
 	height: 12em;
 	width: 12em;
 	text-align: center;
+	border: 1em solid #111;
 	#game-title {
 		margin-top: 2em;
 	}
@@ -39,30 +40,34 @@ $sliver: #A9A9A9;
 
 .game-btn {
 	// border-radius: 100%;
-	height: 11em;
-	width: 11em;
+	cursor: pointer;
+	border: 1em solid #111;
+	margin: -0.5em;
+	height: 17em;
+	width: 17em;
+	float: left;
 	z-index: 1;
 }
 
 #green {
   background-color: $green-base;
+  border-top-left-radius: 100%;
+
+}
+
+#red{
+	background-color: $red-base;
+	border-top-right-radius: 100%;
 }
 
 #yellow{
 	background-color: $yellow-base;
-	
+	border-bottom-left-radius: 100%;
 }
 
-#red{
-		background-color: $red-base;
-	}
 
 #blue{
 	background-color: $blue-base;
-
+	border-bottom-right-radius: 100%;
 }
 
-#top-btns, 
-#bottom-btns {
-	display: inline;
-}

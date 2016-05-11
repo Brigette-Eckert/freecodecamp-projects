@@ -5,8 +5,8 @@
   transform: translate(-50%, -50%);
   background-color: black;
   border-radius: 100%;
-  height: 35em;
-  width: 35em;
+  height: 36em;
+  width: 36em;
   z-index: 0; }
 
 #controls {
@@ -19,29 +19,34 @@
   height: 12em;
   width: 12em;
   text-align: center;
+  border: 1em solid #111;
   z-index: 2; }
   #controls #game-title {
     margin-top: 2em; }
 
 .game-btn {
-  height: 11em;
-  width: 11em;
+  cursor: pointer;
+  border: 1em solid #111;
+  margin: -0.5em;
+  height: 17em;
+  width: 17em;
+  float: left;
   z-index: 1; }
 
 #green {
-  background-color: #00711E; }
-
-#yellow {
-  background-color: #CBB000; }
+  background-color: #00711E;
+  border-top-left-radius: 100%; }
 
 #red {
-  background-color: #CB0000; }
+  background-color: #CB0000;
+  border-top-right-radius: 100%; }
+
+#yellow {
+  background-color: #CBB000;
+  border-bottom-left-radius: 100%; }
 
 #blue {
-  background-color: #15018D; }
-
-#top-btns,
-#bottom-btns {
-  display: inline; }
+  background-color: #15018D;
+  border-bottom-right-radius: 100%; }
 
 /*# sourceMappingURL=main.css.map */
