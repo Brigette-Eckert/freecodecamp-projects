@@ -7,12 +7,17 @@ $yellow-active: #FFDD00;
 $green-base: #00711E;
 $green-active: #00E53C;
 $sliver: #A9A9A9;
+$background:  #1f2e2e;
 
 @mixin centerer {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+html {
+	background-color: $background;
 }
 
 #game {
