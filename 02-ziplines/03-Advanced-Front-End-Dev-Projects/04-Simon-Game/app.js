@@ -1,6 +1,7 @@
 angular.module('simonApp', [])
 
 //use ES6 and Babel
+//change functions to arrow functions 
 
 .controller('.gameCtrl',['$scope', function($scope){
 

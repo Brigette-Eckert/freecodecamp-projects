@@ -1,6 +1,8 @@
 #What I learned from this project:
  ```
-
+   Praticed using Gulp
+   Praticed using ES6
+   Praticed using Babel
 
 ```
 #User Stories
@@ -19,5 +21,8 @@
 
 #Future Features/To Do: 
   ```
-
+	Set up gulp:
+		Sass
+		Local Host 
+		Babel for ES6
   ```
