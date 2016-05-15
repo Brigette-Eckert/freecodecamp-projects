@@ -52,4 +52,19 @@ html {
   background-color: #15018D;
   border-bottom-right-radius: 100%; }
 
+#count-display {
+  background-color: black;
+  color: red;
+  z-index: 3;
+  height: 4em;
+  width: 4em;
+  margin: 0 3.9em; }
+
+.button {
+  background-color: #CBB000;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 100%;
+  margin: 0 3.9em; }
+
 /*# sourceMappingURL=main.css.map */

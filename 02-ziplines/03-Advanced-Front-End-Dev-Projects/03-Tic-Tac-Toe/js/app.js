@@ -25,7 +25,7 @@ function reset() {
     $('.square').removeClass("glow");
     console.log("game reset");
     $('.square').html("");
-  }, 1500);
+  }, 1000);
 };
 
 function start() {

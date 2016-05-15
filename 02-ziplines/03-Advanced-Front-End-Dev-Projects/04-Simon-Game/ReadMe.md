@@ -21,8 +21,5 @@
 
 #Future Features/To Do: 
   ```
-	Set up gulp:
-		Sass
-		Local Host 
-		Babel for ES6
+  
   ```
