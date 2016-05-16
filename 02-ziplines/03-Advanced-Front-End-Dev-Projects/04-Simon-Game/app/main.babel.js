@@ -3,22 +3,23 @@ let moves;
 let mode;
 
 
-//change functions to arrow functions
-//starts the game 
+
+//starts the game
+
 let start = () => {console.log("game started"); 
 turn();
 };
 
 let reset = () => {
-	count = 0; 
-	moves = [];
-	mode = "casual";
+  count = 0; 
+  moves = [];
+  mode = "casual";
 };
 
 let strictOn =() => {
-	count = 0; 
-	moves = [];
-	mode = "strict"
+  count = 0; 
+  moves = [];
+  mode = "strict"
 };
 
 
