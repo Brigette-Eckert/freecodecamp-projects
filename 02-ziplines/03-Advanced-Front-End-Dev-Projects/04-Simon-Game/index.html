@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Simon</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/main.css">
 </head>
@@ -16,18 +17,18 @@
 			<p id="game-title">SIMON</p> 
 			 <div id="count-display"><span class="count"></span></div>
 			 <div id="start" class="button-container"> 
-			 	<div class="button"> 
+			 	<div class="button" id="start-btn"> 
 			 	</div> 
 			 start
 			 </div>
 			 <div id="reset" class="button-container"> 
-			 	<div class="button"> 
+			 	<div class="button" id="reset-btn"> 
 			 	</div> 
 			 reset 
 			 </div>
 			 <div id="strict">
 				<label class="switch">
-  				<input type="checkbox">
+  				<input type="checkbox" class="slider-check">
   				<div class="slider round"></div>
 				</label>
 			  <span class="title">strict</span></div> 

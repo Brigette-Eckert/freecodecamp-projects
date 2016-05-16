@@ -1,32 +1,39 @@
 "use strict";
 
-var count = void 0;
-var moves = void 0;
-var mode = void 0;
+//setting defaults
+var count = 0;
+var moves = [];
+var mode = "casual";
 
 //starts the game
-
 var start = function start() {
   console.log("game started");
   turn();
 };
 
+//reset the game
 var reset = function reset() {
   count = 0;
   moves = [];
-  mode = "casual";
+  console.log("game reset");
 };
 
+//strict  mode;
 var strictOn = function strictOn() {
   count = 0;
   moves = [];
   mode = "strict";
+  console.log("strict mode on");
+};
+
+var strictOff = function strictOff() {
+  return mode = "causal";
 };
 
 var turn = function turn() {
   var board = ["green", "red", "yellow", "blue"];
   console.log(board);
-  $("#count-display").html(count);
+  $(".count").html(count);
   //set each square 1-4, have computer pick random number and add to array of moves.
   //use index of
   //green = 0;
@@ -43,4 +50,26 @@ var turn = function turn() {
 
 var win = function win() {};
 
-start();
+$("#start-btn").click(function () {
+  start();
+});
+
+$("#reset-btn").click(function () {
+  reset();
+});
+
+$(".slider").click(function () {
+  console.log("slider clicked");
+  //default state is checked
+  if ($("input:checked").length == 0) {
+    strictOn();
+  } else {
+    reset();
+  };
+
+  //? (true block) : (else block)
+
+  //if checkbox checked = run Strict -
+
+  // if toggled to uncheck - run reset
+});
