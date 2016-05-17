@@ -72,7 +72,7 @@ function minusWork() {
   };
 
 function addBreak() {
-    //on + button click add 1 to Break     interval
+    //on + button click add 1 to Break interval
     time.break += 1;
     $("p.breakInt").html(timeDisplay(time.break));
   };

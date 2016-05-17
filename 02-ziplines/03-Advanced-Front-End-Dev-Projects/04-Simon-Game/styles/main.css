@@ -41,20 +41,32 @@ html {
   float: left;
   z-index: 1; }
 
+.lightup#green {
+  background-color: #00FF00; }
+
+.lightup#red {
+  background-color: #FF0000; }
+
+.lightup#yellow {
+  background-color: #FFFF00; }
+
+.lightup#blue {
+  background-color: #0000FF; }
+
 #green {
   background-color: #00711E;
   border-top-left-radius: 100%; }
 
 #red {
-  background-color: #CB0000;
+  background-color: #980000;
   border-top-right-radius: 100%; }
 
 #yellow {
-  background-color: #CBB000;
+  background-color: #988400;
   border-bottom-left-radius: 100%; }
 
 #blue {
-  background-color: #15018D;
+  background-color: #0d015a;
   border-bottom-right-radius: 100%; }
 
 #count-display {
@@ -72,7 +84,7 @@ html {
     font-size: 2em; }
 
 .button {
-  background-color: #CBB000;
+  background-color: #988400;
   height: 1.5em;
   width: 1.5em;
   border-radius: 100%;
@@ -112,7 +124,7 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #CB0000;
+  background-color: #980000;
   -webkit-transition: .4s;
   transition: .4s; }
 

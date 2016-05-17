@@ -1,14 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,700);
 
-$red-base: #CB0000;
-$red-active: #FF0000;
-$blue-base: #15018D;
-$blue-active: #2507E1;
-$yellow-base: #CBB000;
-$yellow-active: #FFDD00;
+$red-base: darken(#CB0000, 10%);
+$blue-base: darken(#15018D, 10%);
+$yellow-base: darken(#CBB000, 10%);
 $green-base: #00711E;
-$green-active: #00E53C;
 $silver: #A9A9A9;
 $background:  #1f2e2e;
 
@@ -60,9 +56,24 @@ html {
 	z-index: 1;
 }
 
+.lightup {
+	&#green {
+		background-color: #00FF00;
+	}
+	&#red{
+		background-color: #FF0000;
+	}
+	&#yellow{
+		background-color: #FFFF00;
+	}
+	&#blue{
+		background-color: #0000FF;
+	}
+}
+
 #green {
-  background-color: $green-base;
-  border-top-left-radius: 100%;
+	background-color: $green-base;
+	border-top-left-radius: 100%;
 
 }
 
@@ -187,3 +198,4 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+

@@ -3,6 +3,7 @@
    Praticed using Gulp
    Praticed using ES6
    Praticed using Babel
+   Praticed using timing functions
 
 ```
 #User Stories
