@@ -9,7 +9,7 @@ let audio0 = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
 let audio1 = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound2.mp3");
 let audio2 = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound3.mp3");
 let audio3 = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound4.mp3");
-const audio =   [audio0, audio1, audio2, audio3];
+const audio = [audio0, audio1, audio2, audio3];
 const board = ["green", "red", "yellow", "blue"];
 
 
@@ -23,45 +23,15 @@ $("#reset-btn").click(function() {
   reset();
 });
 
-
-$("#green").click(function(){
-  playerMoves.push("green");
-  audio0.play();
-  $("#green").toggleClass('lightup');
+$('#game').on('click', '.game-btn', function(e) {
+  let color = e.target.getAttribute("id");
+  playerMoves.push(color);
+  audio[board.indexOf(color)].play();
+  $("#" + color).toggleClass('lightup');
   setTimeout(function(){
-    $("#green").toggleClass('lightup');
+    $("#" + color).toggleClass('lightup');
   }, 1000);
-    console.log(playerMoves);
-});
-
-$("#red").click(function(){
-  playerMoves.push("red");
-  audio1.play();
-  $("#red").toggleClass('lightup');
-   setTimeout(function(){
-    $("#red").toggleClass('lightup');
-  }, 1000);
-    console.log(playerMoves);
-});
-
-$("#yellow").click(function(){
-  playerMoves.push("yellow");
-  audio2.play();
-  $("#yellow").toggleClass('lightup');
-   setTimeout(function(){
-    $("#yellow").toggleClass('lightup');
-  }, 1000);
-   console.log(playerMoves);
-});
-
-$("#blue").click(function(){
-  playerMoves.push("blue");
-  audio3.play();
-  $("#blue").toggleClass('lightup');
-   setTimeout(function(){
-    $("#blue").toggleClass('lightup');
-  }, 1000);
-   console.log(playerMoves);
+  console.log(playerMoves);
 });
 
  //if checkbox checked run strict, if its toggled to uncheck it- run reset
@@ -126,19 +96,19 @@ let turn = () => {
 
 
 
-
+//add error sound if user gets color wrong 
 
   //use setinvertal for the color change animation -and audio play 
 
   //trying to get clear interval function to run only after set playBack has run correct number of times, not before 
   //set interval replaces for loop - so don't need it 
 
-    playBack = setInterval(function(){
-      console.log(simonMoves);
-      simonAudio.play();
-      console.log(simonColorSelector);
-      $(simonColorSelector).toggleClass('lightup');
-    }, 2000);
+    // playBack = setInterval(function(){
+    //   console.log(simonMoves);
+    //   simonAudio.play();
+    //   console.log(simonColorSelector);
+    //   $(simonColorSelector).toggleClass('lightup');
+    // }, 2000);
 
 };
 
