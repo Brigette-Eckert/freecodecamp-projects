@@ -1,9 +1,54 @@
 "use strict";
 
-//setting defaults
+//defaults
 var count = 0;
-var moves = [];
+var simonMoves = [];
+var playerMoves = [];
 var mode = "casual";
+var audio1 = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
+var audio2 = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound2.mp3");
+var audio3 = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound3.mp3");
+var audio4 = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound4.mp3");
+
+//game button events
+$("#start-btn").click(function () {
+  start();
+});
+
+$("#reset-btn").click(function () {
+  reset();
+});
+
+$("#green").click(function () {
+  playerMoves.push("green");
+  audio1.play();
+  console.log(playerMoves);
+});
+
+$("#red").click(function () {
+  playerMoves.push("red");
+  audio2.play();
+  console.log(playerMoves);
+});
+
+$("#yellow").click(function () {
+  playerMoves.push("yellow");
+  audio3.play();
+  console.log(playerMoves);
+});
+
+$("#blue").click(function () {
+  playerMoves.push("blue");
+  audio4.play();
+  console.log(playerMoves);
+});
+
+//if checkbox checked run strict, if its toggled to uncheck it- run reset
+$(".slider").click(function () {
+  console.log("slider clicked");
+  //default state is checked
+  $("input:checked").length == 0 ? strictOn() : reset();
+});
 
 //starts the game
 var start = function start() {
@@ -14,28 +59,29 @@ var start = function start() {
 //reset the game
 var reset = function reset() {
   count = 0;
-  moves = [];
+  simonMoves = [];
+  playerMoves = [];
   console.log("game reset");
 };
 
 //strict  mode;
 var strictOn = function strictOn() {
   count = 0;
-  moves = [];
+  simonMoves = [];
+  playerMoves = [];
   mode = "strict";
   console.log("strict mode on");
-};
-
-var strictOff = function strictOff() {
-  return mode = "causal";
+  start();
 };
 
 var turn = function turn() {
   var board = ["green", "red", "yellow", "blue"];
-  console.log(board);
+  //reset player moves at beginning of each new turn
+  playerMoves = [];
   $(".count").html(count);
+
   //set each square 1-4, have computer pick random number and add to array of moves.
-  //use index of
+  //use index of to pick
   //green = 0;
   //red =1;
   //yellow =2;
@@ -49,27 +95,3 @@ var turn = function turn() {
 };
 
 var win = function win() {};
-
-$("#start-btn").click(function () {
-  start();
-});
-
-$("#reset-btn").click(function () {
-  reset();
-});
-
-$(".slider").click(function () {
-  console.log("slider clicked");
-  //default state is checked
-  if ($("input:checked").length == 0) {
-    strictOn();
-  } else {
-    reset();
-  };
-
-  //? (true block) : (else block)
-
-  //if checkbox checked = run Strict -
-
-  // if toggled to uncheck - run reset
-});
