@@ -1,13 +1,13 @@
 "use strict";
 
 // Configuration
-var count = 0;
+var count = 20;
 var simonMoves = [];
 var playerMoves = [];
 var strict = false;
 var currentTurn = void 0;
 var playBack = void 0;
-var winTurn = 20;
+var winTurn = 3;
 var board = ["green", "red", "yellow", "blue"];
 var audio = [new Audio("/sounds/simonSound1.mp3"), new Audio("/sounds/simonSound2.mp3"), new Audio("/sounds/simonSound3.mp3"), new Audio("/sounds/simonSound4.mp3"), new Audio("/sounds/buzzer.mp3"), new Audio("/sounds/victory.mp3")];
 
@@ -67,7 +67,6 @@ var simonPlay = function simonPlay() {
 var playerPlay = function playerPlay(color) {
   playerMoves.push(color);
   flash(color);
-  console.log(playerMoves);
   // Check for matches
   var match = color === simonMoves[playerMoves.length - 1];
   if (!match) {
@@ -83,10 +82,12 @@ var playerPlay = function playerPlay(color) {
 var win = function win() {
   $("#victory").html("Congratulations, You Win!");
   audio[5].play();
+  StartConfetti();
   setTimeout(function () {
     $("#victory").html("");
+    StopConfetti();
+    start();
   }, 4500);
-  start();
 };
 
 $('#game').on('click', '.game-btn', function (e) {

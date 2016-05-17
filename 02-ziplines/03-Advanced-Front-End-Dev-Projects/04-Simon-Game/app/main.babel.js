@@ -1,11 +1,11 @@
 // Configuration
-let count = 0;
+let count = 20;
 let simonMoves = []; 
 let playerMoves = [];
 let strict = false;
 let currentTurn;
 let playBack;
-const winTurn = 20;
+const winTurn = 3;
 const board = ["green", "red", "yellow", "blue"];
 const audio = [ 
   new Audio("/sounds/simonSound1.mp3"), 
@@ -75,7 +75,6 @@ let simonPlay = () => {
 let playerPlay = (color) => {
   playerMoves.push(color);
   flash(color);
-  console.log(playerMoves);
   // Check for matches
   let match = color === simonMoves[playerMoves.length - 1];
   if(!match) {
@@ -91,10 +90,12 @@ let playerPlay = (color) => {
 let win = () => {
   $("#victory").html("Congratulations, You Win!");
   audio[5].play();
+  StartConfetti();
   setTimeout(function(){
     $("#victory").html("");
+    StopConfetti();
+    start();
   }, 4500);
-  start();
 };
 
 $('#game').on('click', '.game-btn', function(e) {
