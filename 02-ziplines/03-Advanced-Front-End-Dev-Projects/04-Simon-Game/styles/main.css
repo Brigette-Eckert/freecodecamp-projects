@@ -105,6 +105,18 @@ html {
     top: 0;
     left: 37%; }
 
+#victory {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 4em;
+  text-align: center;
+  color: #42857C;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; }
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;

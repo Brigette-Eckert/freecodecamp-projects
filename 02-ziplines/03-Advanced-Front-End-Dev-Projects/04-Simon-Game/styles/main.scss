@@ -2,11 +2,16 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,700);
 
 $red-base: darken(#CB0000, 10%);
+$red-highlight: #FF0000;
 $blue-base: darken(#15018D, 10%);
+$blue-highlight: #0000FF;
 $yellow-base: darken(#CBB000, 10%);
+$yellow-highlight: #FFFF00;
 $green-base: #00711E;
+$green-highlight: #00FF00;
 $silver: #A9A9A9;
 $background:  #1f2e2e;
+$victory-message: #42857C;
 
 @mixin centerer {
   position: absolute;
@@ -58,16 +63,16 @@ html {
 
 .lightup {
 	&#green {
-		background-color: #00FF00;
+		background-color: $green-highlight;
 	}
 	&#red{
-		background-color: #FF0000;
+		background-color: $red-highlight;
 	}
 	&#yellow{
-		background-color: #FFFF00;
+		background-color: $yellow-highlight;
 	}
 	&#blue{
-		background-color: #0000FF;
+		background-color: $blue-highlight;
 	}
 }
 
@@ -137,6 +142,15 @@ html {
 	}
 }
 
+#victory {
+	@include centerer;
+	z-index: 5; 
+	font-family: 'Luckiest Guy', cursive;
+	font-size: 4em;
+	text-align: center;
+	color: $victory-message;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 
 //Slider 
 
