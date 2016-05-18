@@ -1,3 +1,8 @@
+/* 
+    Code by Smeegs and Neils on StackOverflow Jul 13 '14 at 18:50 
+    http://stackoverflow.com/users/1526306/smeegs
+    http://stackoverflow.com/users/1041948/niels
+*/
 var canvas;
 var ctx;
 var confettiHandler;
