@@ -1,7 +1,10 @@
 Excersies and Projects I completed at Freecode camp. 
 
-Bonfires are coding challenges where I was given a problem and then had to code the solution.  
+#Bonfires 
+Algorithms I solved using Javascript.   
+Sorted by diffuculty. 
 
-Ziplines are front web development projects where I was given a site or application to reverse enginner. 
 
-Base Jumps are full stack web development projects where I was given a site or application to reverse enginner. 
+#Ziplines
+Projects I reversed engineered.  
+Sorted by difficulty and skils used. 
