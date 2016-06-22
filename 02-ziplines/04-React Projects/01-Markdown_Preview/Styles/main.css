@@ -25,11 +25,31 @@ h1 {
   margin-right: 100px;
   padding: 20px; }
 
-@media screen and (max-width: 1690px) {
+@media (max-width: 1700px) {
   #input {
     margin-left: 50px; }
 
   #output {
     margin-right: 50px; } }
+@media (max-width: 1600px) {
+  #input {
+    height: 500px;
+    width: 500px;
+    margin-left: 150px; }
+
+  #output {
+    width: 500px;
+    height: 500px;
+    margin-right: 150px; } }
+@media (max-width: 1400px) {
+  #input {
+    height: 500px;
+    width: 500px;
+    margin-left: 200px; }
+
+  #output {
+    width: 500px;
+    height: 500px;
+    margin-right: 200px; } }
 
 /*# sourceMappingURL=main.css.map */
