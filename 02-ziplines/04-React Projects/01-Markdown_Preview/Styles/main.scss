@@ -1,0 +1,45 @@
+$bright_green: #00ff00;
+$grey: #383838;
+
+html {
+  background-color: black;
+  color: white;
+}
+h1 {
+  text-align: center;
+}
+
+#input, #output {
+  font-family: monospace;
+  color: $bright_green;
+  background-color: $grey;
+  height: 700px;
+  width:700px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 25px;
+}
+
+#input{
+  float: left;
+  margin-left: 100px;
+  padding: 20px;
+}
+
+#output {
+  float: right;
+  margin-right: 100px;
+  padding: 20px;
+}
+
+
+
+//add media queries- to stack on smaller screens
+@media screen and (max-width:1690px){
+  #input {
+    margin-left: 50px;
+  }
+   #output {
+    margin-right: 50px;
+   }
+}

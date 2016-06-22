@@ -1,3 +1,35 @@
+html {
+  background-color: black;
+  color: white; }
 
+h1 {
+  text-align: center; }
+
+#input, #output {
+  font-family: monospace;
+  color: #00ff00;
+  background-color: #383838;
+  height: 700px;
+  width: 700px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 25px; }
+
+#input {
+  float: left;
+  margin-left: 100px;
+  padding: 20px; }
+
+#output {
+  float: right;
+  margin-right: 100px;
+  padding: 20px; }
+
+@media screen and (max-width: 1690px) {
+  #input {
+    margin-left: 50px; }
+
+  #output {
+    margin-right: 50px; } }
 
 /*# sourceMappingURL=main.css.map */
