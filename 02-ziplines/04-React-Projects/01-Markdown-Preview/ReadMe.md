@@ -1,7 +1,8 @@
 #What I learned from this project:
  ```
  ReactJS
- Practiced using Gulp 
+ Webpack
+ Praticed using JSX
  Practiced using Babel 
  
 ```

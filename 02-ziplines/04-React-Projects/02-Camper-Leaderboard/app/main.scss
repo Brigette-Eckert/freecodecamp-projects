@@ -1,0 +1,32 @@
+$green: #659446;
+$teal: #426D52;
+$dark-gold: #585414;
+$light-brown: #3D3A1B;
+$chocolate: #1D1405;
+
+html {
+  background-color: $chocolate;
+  color: white;
+}
+
+#board {
+  margin: auto;
+  height: 700px;
+  max-width: 1000px;
+  background-color: $green;
+}
+
+#board-title {
+  background-color: $teal;
+  max-width: 1000px;
+  height: 56px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+#board-labels{
+  background-color: $dark-gold;
+  max-width: 1000px;
+  height: 56px;
+  margin: auto;
+}
