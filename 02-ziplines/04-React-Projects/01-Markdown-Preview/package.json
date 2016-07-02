@@ -1,7 +1,7 @@
 {
   "name": "markdown",
   "version": "1.0.0",
-  "description": "markdown preview built for f",
+  "description": "markdown preview built for fcc",
   "main": "index.js",
   "dependencies": {
     "marked": "^0.3.5",
@@ -13,6 +13,7 @@
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.1.1",
     "css-loader": "^0.23.1",
     "html-webpack-plugin": "^2.15.0",
     "node-sass": "^3.8.0",
@@ -22,7 +23,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --hot",
     "prod": "webpack -p"
   },
   "author": "bbeckert",

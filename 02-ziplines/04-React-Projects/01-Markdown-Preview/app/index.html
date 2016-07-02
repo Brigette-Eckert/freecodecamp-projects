@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
     <title>Markdown Preview</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="app/normalize.css">
+    <link rel="stylesheet" href="app/main.css">
 </head>
 <body>
 <h1>Markdown Preview</h1>
-<textarea id="input">
+<div id="input">
     #Test
     #### Test Font
     ***
     + Testing
     + 123
     *Testing
-</textarea>
+</div>
 <div id="output">
     ReactDOM.render(<HelloMessage name="John" />, mountNode);
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
-<script src="App/main.js"></script>
+<script src="dist/index_bundle.js"></script>
 </body>
 </html>
