@@ -9,7 +9,8 @@ h1 {
   text-align: center;
 }
 
-#input, #output {
+.half {
+  border: none;
   font-family: monospace;
   color: $bright_green;
   background-color: $grey;
@@ -21,13 +22,13 @@ h1 {
   padding: 20px;
 }
 
-#input{
+.left {
   float: left;
   margin-left: 100px;
 
 }
 
-#output {
+.right {
   float: right;
   margin-right: 100px;
 }
@@ -36,21 +37,21 @@ h1 {
 
 //add media queries- to stack on smaller screens
 @media (max-width: 1700px){
-  #input {
+  .left  {
     margin-left: 50px;
   }
-   #output {
+  .right {
     margin-right: 50px;
-   }
+  }
 }
 
 @media (max-width: 1600px){
-  #input {
+  .left {
     height: 500px;
     width: 500px;
     margin-left: 150px;
   }
-  #output {
+  .right  {
     width: 500px;
     height: 500px;
     margin-right: 150px;
@@ -58,12 +59,12 @@ h1 {
 }
 
 @media (max-width: 1400px){
-  #input {
+  .left {
     height: 500px;
     width: 500px;
     margin-left: 200px;
   }
-  #output {
+  .right{
     width: 500px;
     height: 500px;
     margin-right: 200px;

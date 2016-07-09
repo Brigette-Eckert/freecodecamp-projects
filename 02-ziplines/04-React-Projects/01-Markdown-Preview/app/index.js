@@ -1,26 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+require('./main.scss');
 
-console.log(marked('I am using __markdown__.'));
-
-
-
-var HelloMessage = React.createClass({
-    render: function () {
-        return <h1>Hello {this.props.message}! </h1>;
+var InputBox = React.createClass({
+    render: function() {
+        return <textarea className="half left" onChange={this.props.changeOutput} id="input"/>
     }
 });
 
-ReactDOM.render(<HelloMessage message="World" /> , document.getElementById('output'));
 
-// get data from textbox and pass into MarkDownText function
-//
-// var MarkDownText = React.createClass({
-//     render: function (data) {
-//         return marked<p> {this.props.fata} </p?;
-//     }
-// })
+var MarkDownText = React.createClass({
+    render: function () {
+        return <div className="half right" id="output"></div>;
+    }
+});
 
-//ReactDom.render(<MarkDownText data = "#Text" /> document.getElementById('output'));
+var OuterBox = React.createClass({
+    getInitialState: function() {
+        return {
+            input: "# Hello World!"
+        }
+    },
+    changeOutput: function() {
+        var newInput = document.getElementById('input').value;
+        document.getElementById('output').innerHTML = marked(newInput);
+        this.setState({
+            input: newInput
+        });
+    },
+    render: function() {
+        return (
+            <div>
+                <InputBox changeOutput={this.changeOutput} />
+                <MarkDownText outputText={this.state.input}/>
+            </div>
+        )
+    }
+});
+
+ReactDOM.render(<OuterBox />, document.getElementById('target'));
 
