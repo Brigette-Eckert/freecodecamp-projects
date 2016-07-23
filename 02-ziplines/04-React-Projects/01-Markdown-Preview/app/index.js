@@ -1,25 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-require('./main.scss');
+require('./stylesheets/main.scss');
 
+//box for user input text
 var InputBox = React.createClass({
-    render: function() {
-        return <textarea className="half left" onChange={this.props.changeOutput} id="input"/>
-    }
+    //setting initial html to cheat sheet for Markdown
+    render: function(){
+        return <input className="half left" value="# Hello World ### This is a Markdown Preview App ** Test it Out by Typing your Mardown Text Here ** Paragraphs are separated by a blank line.  Leave 2 spaces at the end of a line to do a break. Text attributes *italic*, **bold**, `monospace`, ~~strikethrough~~
+        Unordered Lists:  *Cats *Dogs *Rabbits Ordered Lists: 1.Ice Cream  2.Brownies 3.Cake" onChange={this.props.changeOutput} id="input"/>
+    },
 });
 
-
+//convert text to markdown
 var MarkDownText = React.createClass({
     render: function () {
         return <div className="half right" id="output"></div>;
     }
 });
 
+//display converted text
 var OuterBox = React.createClass({
     getInitialState: function() {
         return {
-            input: "# Hello World!"
+            input: marked("# Hello World ### This is a Markdown Preview App ** Test it Out by Typing your Mardown Text Here ** Paragraphs are separated by a blank line.  Leave 2 spaces at the end of a line to do a break. Text attributes *italic*, **bold**, `monospace`, ~~strikethrough~~  Unordered Lists:  *Cats *Dogs *Rabbits Ordered Lists: 1.Ice Cream  2.Brownies 3.Cake")
         }
     },
     changeOutput: function() {
