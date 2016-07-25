@@ -7,10 +7,20 @@ require('./stylesheets/main.scss');
 var InputBox = React.createClass({
     //setting initial html to cheat sheet for Markdown
     render: function(){
-        return <input className="half left" value="# Hello World ### This is a Markdown Preview App ** Test it Out by Typing your Mardown Text Here ** Paragraphs are separated by a blank line.  Leave 2 spaces at the end of a line to do a break. Text attributes *italic*, **bold**, `monospace`, ~~strikethrough~~
+        return <textarea className="half left" value="# Hello World ### This is a Markdown Preview App ** Test it Out by Typing your Mardown Text Here ** Paragraphs are separated by a blank line.  Leave 2 spaces at the end of a line to do a break. Text attributes *italic*, **bold**, `monospace`, ~~strikethrough~~
         Unordered Lists:  *Cats *Dogs *Rabbits Ordered Lists: 1.Ice Cream  2.Brownies 3.Cake" onChange={this.props.changeOutput} id="input"/>
     },
 });
+
+//take out breaks and use /n instead- example code
+// "# Testing *mark*down\n####'
+// What is there to test?\n****\n+
+// Everything\n+ Nothing\n* Whatever you want!\n----\n| Code
+// | None Code |\n-------------- | -------------   |\n| `*Hi*`
+// | *Hi*             |\n| `**Bye**`   | **Bye**        |\n| `~~Die~~` | ~~Die~~
+//  |\n____\n```\nfunction hello_world() {\n    alert(\"**HELLO WORLD**!\");\n}\n`
+// ``\n>Notice that the `**` don't do anything\n\n#### Have fun with this!\n*~
+// [Herman Fassett](http://freecodecamp.com/hermanfassett)
 
 //convert text to markdown
 var MarkDownText = React.createClass({
