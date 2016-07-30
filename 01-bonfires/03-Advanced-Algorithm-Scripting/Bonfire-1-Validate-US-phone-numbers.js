@@ -25,10 +25,10 @@ function telephoneCheck(str) {
 }
 
 
-// telephoneCheck("2(757)6227382");
-// telephoneCheck("(6505552368)");
-// telephoneCheck("123**&!!asdf#");
-// telephoneCheck("1 555)555-5555");
-// telephoneCheck("1(555)555-5555");
+telephoneCheck("2(757)6227382");
+telephoneCheck("(6505552368)");
+telephoneCheck("123**&!!asdf#");
+telephoneCheck("1 555)555-5555");
+telephoneCheck("1(555)555-5555");
 telephoneCheck("1 555)555-5555");
 
