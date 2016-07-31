@@ -2,6 +2,7 @@
  ```
 D3.js
 Practiced Data Visualization Techniques 
+Practiced using ES6
 
  
 ```
