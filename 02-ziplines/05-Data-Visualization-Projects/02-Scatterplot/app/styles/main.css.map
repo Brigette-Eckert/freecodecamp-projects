@@ -1,0 +1,1 @@
+{"version":3,"file":"main.css","sources":["main.scss"],"sourcesContent":["footer {\r\n  font-weight: bold;\r\n  img {\r\n    height: 52px;\r\n    width: 100px;\r\n  }\r\n}\r\n"],"mappings":"AAAA,AAAA,MAAM,CAAC;EACL,WAAW,EAAE,IAAK,GAKnB;EAND,AAEE,MAFI,CAEJ,GAAG,CAAC;IACF,MAAM,EAAE,IAAK;IACb,KAAK,EAAE,KAAM,GACd","names":[],"sourceRoot":"/source/"}
