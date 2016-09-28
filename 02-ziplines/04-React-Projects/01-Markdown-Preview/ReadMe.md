@@ -14,4 +14,5 @@
 
 #Future Features/To Do: 
   ```
+    add responsiveness for mobile
   ```

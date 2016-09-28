@@ -9,25 +9,29 @@ var InputBox = React.createClass({
     //setting initial html to cheat sheet for Markdown
     //text formatting in block is for MD input to read correctly
     render: function(){
-        return <textarea className="half left" value ="Hello World
-        ============
-        This is a Markdown Preview App.  Test it Out by Typing your Markdown Text Here.
-        -----------------
+        return <textarea className="half left" defaultValue ="# Hello World
+       --------------
+        This is a Markdown Preview App.
+        Test it Out by Typing your Markdown Text Here.
+        *******
+
         *italic*, **bold**, ~~strikethrough~~
         ******
 
+
         Unordered Lists:
 
-          + javascript
-          + python
-          + php
+          + Ada Lovelace
+          + Grace Hopper
+          + Anita Borg
          ******
+
 
         Ordered Lists:
 
-         1. Ice Cream
-         2. Brownies
-         3. Cake" onChange={this.props.changeOutput} id="input"/>
+         1. Javascript
+         2. Python
+         3. PHP" onChange={this.props.changeOutput} id="input"/>
     },
 });
 
@@ -42,11 +46,14 @@ var OutputBox = React.createClass({
 //Render Both Compotents and run function to convert text to MD
 var OuterBox = React.createClass({
     getInitialState: function() {
-        //need to set up initial text in here.
         return {
             input: ""
         }
     },
+    componentDidMount: function() {
+        return this.changeOutput()
+    },
+
     changeOutput: function() {
         var newInput = document.getElementById('input').value;
         document.getElementById('output').innerHTML = marked(newInput);
