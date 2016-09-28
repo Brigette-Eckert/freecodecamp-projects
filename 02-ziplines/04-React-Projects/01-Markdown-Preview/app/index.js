@@ -9,29 +9,7 @@ var InputBox = React.createClass({
     //setting initial html to cheat sheet for Markdown
     //text formatting in block is for MD input to read correctly
     render: function(){
-        return <textarea className="half left" defaultValue ="# Hello World
-       --------------
-        This is a Markdown Preview App.
-        Test it Out by Typing your Markdown Text Here.
-        *******
-
-        *italic*, **bold**, ~~strikethrough~~
-        ******
-
-
-        Unordered Lists:
-
-          + Ada Lovelace
-          + Grace Hopper
-          + Anita Borg
-         ******
-
-
-        Ordered Lists:
-
-         1. Javascript
-         2. Python
-         3. PHP" onChange={this.props.changeOutput} id="input"/>
+        return <textarea className="half left" onChange={this.props.changeOutput} id="input"/>
     },
 });
 
@@ -51,6 +29,7 @@ var OuterBox = React.createClass({
         }
     },
     componentDidMount: function() {
+        document.getElementById("input").value = "# Hello World\n--------------\nThis is a Markdown Preview App.\nTest it Out by Typing your Markdown Text Here.\n*******\n*italic*, **bold**, ~~strikethrough~~\n******\n\nUnordered Lists:\n  + Ada Lovelace\n  + Grace Hopper\n  + Anita Borg\n \n******\n\nOrdered Lists:\n 1. Javascript\n 2. Python\n 3. PHP"
         return this.changeOutput()
     },
 
