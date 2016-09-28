@@ -1,1 +1,39 @@
-node_module
+node_modules
+
+## Ignore Drupal Sites Settings
+# Ignore configuration files that may contain sensitive information.
+drupal/*/sites/*/*settings*.php
+
+# Ignore paths that contain generated content.
+/drupal/*/files/
+/drupal/cafe-sitesites/*/files
+/drupal/*/sites/*/private
+
+# Ignore default text files
+/drupal/*/robots.txt
+/drupal/*/CHANGELOG.txt
+/drupal/*/COPYRIGHT.txt
+/drupal/*/INSTALL*.txt
+/drupal/*/LICENSE.txt
+/drupal/*/MAINTAINERS.txt
+/drupal/*/UPGRADE.txt
+/drupal/*/README.txt
+/drupal/*/sites/README.txt
+/drupal/*/sites/all/modules/README.txt
+/drupal/*/sites/all/themes/README.txt
+
+# Ignore everything but the "sites" folder ( for non core developer )
+/drupal/*/.htaccess
+/drupal/*/web.config
+/drupal/*/authorize.php
+/drupal/*/cron.php
+/drupal/*/index.php
+/drupal/*/install.php
+/drupal/*/update.php
+/drupal/*/xmlrpc.php
+/drupal/*/includes
+/drupal/*/misc
+/drupal/*/modules
+/drupal/*/profiles
+/drupal/*/scripts
+/drupal/*/themes
