@@ -17,5 +17,13 @@
 
 //extra small screen
 @media (max-width: 768px) {
+  .left {
+    float: none;
+    margin-left: 50%;
+  }
 
+  .right {
+    float: none;
+    margin-right: 50%;
+  }
 }
