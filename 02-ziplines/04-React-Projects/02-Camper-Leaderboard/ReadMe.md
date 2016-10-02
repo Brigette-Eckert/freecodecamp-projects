@@ -1,9 +1,10 @@
 #What I learned from this project:
  ```
+ Using Axios
  Practiced using ReactJS
  Practiced using JSX
  Practiced using Babel 
- Praticed using Webpack
+ Practiced using Webpack
  
 ```
 #User Stories
