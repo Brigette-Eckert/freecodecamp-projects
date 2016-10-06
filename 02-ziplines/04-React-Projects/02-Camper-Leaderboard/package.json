@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "axios": "^0.14.0",
+    "bootstrap-sass": "^3.3.7",
     "react": "^0.14.8",
     "react-dom": "^0.14.8"
   },
