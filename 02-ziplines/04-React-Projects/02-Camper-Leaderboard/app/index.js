@@ -57,11 +57,11 @@ var LeaderBoard = React.createClass({
     },
     displayAllTime: function(){
         console.log("display all time points");
-        this.state.active = 'allTime'
+        this.setState({active: 'allTime'});
     },
     displayRecent: function(){
         console.log("display recent points");
-        this.state.active = 'recent'
+        this.setState({active: 'recent'});
     },
     render: function(){
         console.log(this.state);
