@@ -25,13 +25,11 @@ var BoardLabels = React.createClass({
 var CamperData = React.createClass({
     render: function(){
         return(
-            //loop over array of camper data rows - with array .map  from data array
-            // two arrays in this.state.recent, this.state.allTime
-            // this.state[this.state.active].map
-        <div id="board">
-            <div>DATA </div>
-            <div className="camper-row">{this.props.rank} {this.props.img} {this.props.username} {this.props.recent} {this.props.alltime}</div>
-        </div>
+            <div id="board">
+                {this.props.items.map(function(item, index) {
+                    return <div className="camper-row" key={index}> {index+1} {item.username} {item.alltime}, {item.recent} <img src={item.img}/></div>
+                })};
+            </div>
         )
     }
 });
@@ -39,7 +37,7 @@ var CamperData = React.createClass({
 
 //Main competent rendering all components
 var LeaderBoard = React.createClass({
-    getIntialState: function(){
+    getInitialState: function(){
         return{
             allTime: [],
             recent: [],
@@ -50,6 +48,9 @@ var LeaderBoard = React.createClass({
         let component = this;
         axios.get('http://fcctop100.herokuapp.com/api/fccusers/top/alltime').then(function(allTime){
             axios.get('http://fcctop100.herokuapp.com/api/fccusers/top/recent').then(function(recent){
+
+                console.log(recent);
+
                 component.setState({
                     recent: recent.data,
                     allTime: allTime.data
@@ -59,18 +60,19 @@ var LeaderBoard = React.createClass({
     },
     displayAllTime: function(){
         console.log("display all time points");
-       this.state.active = 'allTime'
+        this.state.active = 'allTime'
     },
     displayRecent: function(){
         console.log("display recent points");
         this.state.active = 'recent'
     },
     render: function(){
+        console.log(this.state);
         return(
             <div>
                 <div id="board-title"> Camper Leaderboard </div>
                 <BoardLabels displayAllTime={this.displayAllTime} displayRecent={this.displayRecent} />
-                <CamperData/>
+                <CamperData items={this.state.allTime}/>
             </div>
         )
     }
@@ -79,8 +81,3 @@ var LeaderBoard = React.createClass({
 
 //render components
 ReactDOM.render(<LeaderBoard/>, document.getElementById("app"));
-
-
-//figuring out how to use state  to display data
-
-//use table to display data?
