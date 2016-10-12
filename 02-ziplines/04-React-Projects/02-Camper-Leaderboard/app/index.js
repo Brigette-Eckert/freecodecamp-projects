@@ -29,13 +29,11 @@ var CamperData = React.createClass({
             // two arrays in this.state.recent, this.state.allTime
             // this.state[this.state.active].map
         <div id="board">
+            <div>DATA </div>
             <div className="camper-row">{this.props.rank} {this.props.img} {this.props.username} {this.props.recent} {this.props.alltime}</div>
         </div>
         )
     }
-
-
-    //toggle between last 30 days and all time -on click using state, when clicking on 30days label or on Alltime label
 });
 
 
@@ -81,3 +79,8 @@ var LeaderBoard = React.createClass({
 
 //render components
 ReactDOM.render(<LeaderBoard/>, document.getElementById("app"));
+
+
+//figuring out how to use state  to display data
+
+//use table to display data?
