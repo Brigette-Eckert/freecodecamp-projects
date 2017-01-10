@@ -14,7 +14,7 @@ gulp.task('babel', () => {
 });
 
 gulp.task('sass', () => {
-  gulp.src('styles/main.scss')
+  gulp.src('styles/main.css')
       .pipe(maps.init())
       .pipe(sass())
       .pipe(maps.write('./'))

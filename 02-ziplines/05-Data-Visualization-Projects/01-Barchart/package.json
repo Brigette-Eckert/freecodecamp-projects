@@ -1,0 +1,14 @@
+{
+  "name": "bar-chart",
+  "version": "1.0.0",
+  "description": "a bar chart built showing US GDP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+  },
+  "author": "Brigette Eckert",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^4.4.1",
+  }
+}
