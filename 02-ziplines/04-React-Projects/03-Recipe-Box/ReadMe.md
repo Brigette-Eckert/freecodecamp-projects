@@ -5,7 +5,7 @@
  Practiced using JSX
  Practiced using Babel 
  Practiced using Webpack
- Particed using Bootstrap with SASS
+ Practiced using Bootstrap with SASS
  
 ```
 #User Stories

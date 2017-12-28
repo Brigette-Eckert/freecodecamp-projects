@@ -21,4 +21,5 @@ function sumAll(arr) {
 	return sum;
 }
 
+// Free Code Camp Tests
 sumAll([1, 4]);

@@ -14,7 +14,7 @@ function spinalCase(str) {
 	console.log(casedStr);
   	return casedStr;
 }
-
+// Free Code Camp Tests
 spinalCase('This Is Spinal Tap');
 spinalCase("The_Andy_Griffin_Show");
 spinalCase("thisIsSpinalTap");

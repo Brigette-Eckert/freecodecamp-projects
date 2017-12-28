@@ -24,7 +24,7 @@ function telephoneCheck(str) {
   return true;
 }
 
-
+// Free Code Camp Tests
 telephoneCheck("2(757)6227382");
 telephoneCheck("(6505552368)");
 telephoneCheck("123**&!!asdf#");

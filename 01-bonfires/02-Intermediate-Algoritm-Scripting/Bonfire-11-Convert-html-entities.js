@@ -17,7 +17,7 @@ function convert(str) {
   console.log(htmlStr);
   return htmlStr;
 }
- 
 
+// Free Code Camp Tests
 convert("Dolce & Gabbana");
 convert("Hamburgers < Pizza < Tacos");

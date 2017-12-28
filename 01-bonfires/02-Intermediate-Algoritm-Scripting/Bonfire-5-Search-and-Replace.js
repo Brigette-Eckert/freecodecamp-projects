@@ -24,6 +24,7 @@ function myReplace(str, before, after) {
  return newSentence;
 }
 
+// Free Code Camp Tests
 myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
 myReplace("He is Sleeping on the couch", "Sleeping", "sitting");
 myReplace("This has a spellngi error", "spellngi", "spelling");

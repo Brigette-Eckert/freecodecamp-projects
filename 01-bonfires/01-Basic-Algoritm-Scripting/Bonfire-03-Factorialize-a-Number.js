@@ -14,5 +14,5 @@ function factorialize(num) {
 	return sum;
 }
 
-
+// Free Code Camp Tests
 factorialize(5);

@@ -9,5 +9,5 @@ function meetBonfire(argument) {
 }
 
 
-
+// Free Code Camp Tests
 meetBonfire("You can do this!");

@@ -37,6 +37,7 @@ function add() {
   return sum;
 }
 
+// Free Code Camp Tests
 // add(2,3);
 add(2,"3");
 // add(2)(3);

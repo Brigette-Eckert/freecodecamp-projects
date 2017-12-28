@@ -10,4 +10,5 @@ function reverseString(str) {
  return revStr;
 }
 
+// Free Code Camp Tests
 reverseString('hello');

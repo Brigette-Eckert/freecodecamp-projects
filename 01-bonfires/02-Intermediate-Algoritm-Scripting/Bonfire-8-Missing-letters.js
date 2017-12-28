@@ -25,7 +25,7 @@ function fearNotLetter(str) {
 	}
 }
 
-
+// Free Code Camp Tests
 fearNotLetter("abce");
 fearNotLetter("abcdefghjklmno");
 fearNotLetter("bcd");

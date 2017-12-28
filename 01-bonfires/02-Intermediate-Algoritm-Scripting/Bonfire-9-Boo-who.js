@@ -11,6 +11,7 @@ function boo(bool){
 	}
 }
 
+// Free Code Camp Tests
 boo(null);
 boo(true); 
 boo(false);

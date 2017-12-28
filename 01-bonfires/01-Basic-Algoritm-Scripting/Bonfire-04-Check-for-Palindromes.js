@@ -20,5 +20,5 @@ function palindrome(str) {
 
 
 
-
+// Free Code Camp Tests
 palindrome("eye");

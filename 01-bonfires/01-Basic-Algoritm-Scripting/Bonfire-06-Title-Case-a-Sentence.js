@@ -18,4 +18,5 @@ function titleCase(str) {
  	return newStr;
 }
 
+// Free Code Camp Tests
 titleCase("I'm a little teapot Short and Shout");

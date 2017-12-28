@@ -9,6 +9,6 @@ function find(arr, func) {
   	break;
   }
 }
-
+// Free Code Camp Tests
 find([1, 2, 3, 4], function(num){ return num % 2 === 0; });
 find([1, 3, 5, 9], function(num) { return num % 2 === 0; });

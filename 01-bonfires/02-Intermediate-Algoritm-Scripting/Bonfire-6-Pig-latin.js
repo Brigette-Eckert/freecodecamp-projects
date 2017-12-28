@@ -73,6 +73,7 @@ function translate(str) {
        return str;
 };
 
+// Free Code Camp Tests
 translate("consonant");
 translate("california");
 translate("paragraphs");

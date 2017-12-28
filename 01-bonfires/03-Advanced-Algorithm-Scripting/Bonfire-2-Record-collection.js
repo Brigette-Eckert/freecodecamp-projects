@@ -59,7 +59,7 @@ var collectionCopy = JSON.parse(JSON.stringify(collection));
     return collection;
 }
 
-// Alter values below to test your code
+// Free Code Camp Tests
 updateRecords(5439, "artist", "ABBA");
 updateRecords(5439, "tracks", "Take a Chance on Me");
 updateRecords(2548, "artist", "");

@@ -14,5 +14,5 @@ function every(collection, pre) {
   return honest;
 }
 
-
+// Free Code Camp Tests
 every([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex")

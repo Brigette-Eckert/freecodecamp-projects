@@ -26,8 +26,8 @@ function pair(str) {
 	console.log(basePairs);
 	return(basePairs);
 }
-	
 
+// Free Code Camp Tests
 pair("GCG");
 pair("ATCGA");
 pair("TTGAG");

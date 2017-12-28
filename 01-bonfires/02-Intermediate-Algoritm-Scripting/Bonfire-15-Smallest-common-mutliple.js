@@ -27,7 +27,7 @@ function smallestCommons(arr) {
   }
 }
 
-
+// Free Code Camp Tests
 smallestCommons([1,5]);
 smallestCommons([5,1]);
 smallestCommons([1,13]);

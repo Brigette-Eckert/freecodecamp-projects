@@ -29,7 +29,7 @@ function sumFibs(num) {
      console.log("The sum is " + sum);
  return sum;
 }
-
+// Free Code Camp Tests
 sumFibs(1);
 sumFibs(4);
 sumFibs(1000);

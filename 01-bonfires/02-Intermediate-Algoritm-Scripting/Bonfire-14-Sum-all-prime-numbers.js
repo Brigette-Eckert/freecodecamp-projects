@@ -35,6 +35,6 @@ function sumPrimes(num) {
   console.log(sum);
   return sum;
 }
-
+// Free Code Camp Tests
 sumPrimes(10);
 sumPrimes(977);

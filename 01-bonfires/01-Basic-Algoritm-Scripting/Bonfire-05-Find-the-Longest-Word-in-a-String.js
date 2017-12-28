@@ -17,4 +17,5 @@ function findLongestWord(str) {
 
 }
 
+// Free Code Camp Tests
 findLongestWord('The quick brown fox jumped over the lazy dog');
